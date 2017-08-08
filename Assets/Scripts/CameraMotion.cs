@@ -5,8 +5,9 @@ using UnityEngine;
 public class CameraMotion : MonoBehaviour {
 
     public Transform target;
+    public float yOffset = 0f;
 
 	void LateUpdate() {
-		transform.position = new Vector3 (target.position.x,51f,target.position.z);
+		transform.position = new Vector3 (target.position.x,target.position.y+yOffset,target.position.z);
 	}
 }
