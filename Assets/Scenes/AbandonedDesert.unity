@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 0f16ba6e7760cd4408b176b821f1df60
+  m_OcclusionCullingData: {fileID: 36300000, guid: 76b762197f579184d9005396106ffe0d,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -2833,6 +2834,7 @@ GameObject:
   - component: {fileID: 782125801}
   - component: {fileID: 782125800}
   - component: {fileID: 782125804}
+  - component: {fileID: 782125799}
   m_Layer: 0
   m_Name: PLCamera
   m_TagString: Untagged
@@ -2840,6 +2842,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &782125799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 782125798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 3886e3c88ec579f458f636ef6c5eae40, type: 2}
 --- !u!92 &782125800
 Behaviour:
   m_ObjectHideFlags: 0
@@ -2915,7 +2929,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1151305062}
-  yOffset: 45
+  yOffset: 84.79
+  zOffset: -35.7
 --- !u!1001 &800278621
 Prefab:
   m_ObjectHideFlags: 0
@@ -5522,7 +5537,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: 1
+    m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.5
     m_Bias: 0.6
