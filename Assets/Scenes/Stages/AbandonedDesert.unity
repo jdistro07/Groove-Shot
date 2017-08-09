@@ -4987,7 +4987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverForce: 100000
-  counterHover: 5000
+  counterHover: 8000
   hoverHeight: 4
   forwardSpeed: 125000
   turnSpeed: 10000
