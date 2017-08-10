@@ -13,6 +13,7 @@ public class MainMenuScript : MonoBehaviour {
     public AudioClip clickConfirm;
     public AudioClip clickSpecial;
     public AudioClip clickCancel;
+    public AudioClip clickSelection;
 
     public AudioSource audioSource;
 
@@ -28,6 +29,11 @@ public class MainMenuScript : MonoBehaviour {
         //Default States
         quitMenu.SetActive(false);
 	}
+
+    public void clkSelection()
+    {
+        audioSource.PlayOneShot(clickSelection);
+    }
 
     //Sound Efects
     public void ClkSpecial()
