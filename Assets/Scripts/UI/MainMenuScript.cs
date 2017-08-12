@@ -5,11 +5,15 @@ using UnityEngine.UI;
 
 public class MainMenuScript : MonoBehaviour {
 
+
+    //UI controls/GameObjects
     public GameObject quitMenu;
     public GameObject mainButtons;
     public GameObject mapSelect;
     public GameObject shipSelection;
 
+
+    //Audio
     public AudioClip clickConfirm;
     public AudioClip clickSpecial;
     public AudioClip clickCancel;
@@ -18,6 +22,8 @@ public class MainMenuScript : MonoBehaviour {
     public AudioSource audioSource;
 
     void Start () {
+
+        //Refferences
         quitMenu.GetComponent<GameObject>();
         mainButtons.GetComponent<GameObject>();
         mapSelect.GetComponent<GameObject>();
@@ -30,12 +36,12 @@ public class MainMenuScript : MonoBehaviour {
         quitMenu.SetActive(false);
 	}
 
+    //Sound Efects
     public void clkSelection()
     {
         audioSource.PlayOneShot(clickSelection);
     }
 
-    //Sound Efects
     public void ClkSpecial()
     {
         audioSource.PlayOneShot(clickSpecial);
@@ -84,7 +90,7 @@ public class MainMenuScript : MonoBehaviour {
         mainButtons.SetActive(true);
     }
 
-    //Functions
+    //UI Functions
     public void ConfirmQuit()
     {
         Application.Quit();
