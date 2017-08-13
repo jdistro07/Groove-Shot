@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class MainMenuScript : MonoBehaviour {
 
+    //Scripts
+    private uiIDCatcher id;
 
     //UI controls/GameObjects
     public GameObject quitMenu;
     public GameObject mainButtons;
     public GameObject mapSelect;
     public GameObject shipSelection;
+
+    //Buttons
+    public Button btnConfirm; //This control can be found on the MapSelection Panel
 
 
     //Audio
@@ -22,7 +27,8 @@ public class MainMenuScript : MonoBehaviour {
     public AudioSource audioSource;
 
     void Start () {
-
+        id = GetComponent<uiIDCatcher>();
+        
         //Refferences
         quitMenu.GetComponent<GameObject>();
         mainButtons.GetComponent<GameObject>();
@@ -34,7 +40,26 @@ public class MainMenuScript : MonoBehaviour {
 
         //Default States
         quitMenu.SetActive(false);
+
+        //Button default states
+
+        if(id.mapID.Length == 0)    //for button confirm (Select Map Panel) DISABLE
+        {
+            btnConfirm.interactable=false;
+        }
 	}
+
+    private void Update()
+    {
+        if (!(id.mapID.Length == 0))    //for button confirm (Select Map Panel) ENABLE
+        {
+            btnConfirm.interactable = true;
+        }
+        else
+        {
+            btnConfirm.interactable = false;
+        }
+    }
 
     //Sound Efects
     public void clkSelection()

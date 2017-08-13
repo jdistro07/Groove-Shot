@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class ObjectID : MonoBehaviour
 {
-    public string ObjectIDMap;
-    public string ObjectIDShips;
+    public string InputIDMap;
+    public string InputIDShip;
 
-    private string IDMap;
-    private string IDShips;
+	private string IDMap;
+    private string IDShip;
 
-    void Start()
-    {
-        IDMap = ObjectIDMap;
-        IDShips = ObjectIDShips;
-
-        print("Map "+IDMap+"Ship "+IDShips);
-    }
+	void Awake()
+	{
+		IDMap = InputIDMap;
+		IDShip = InputIDShip;
+	}
 
 }

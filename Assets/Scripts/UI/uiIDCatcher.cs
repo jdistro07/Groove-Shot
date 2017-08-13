@@ -1,38 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class uiIDCatcher : MonoBehaviour {
-
-    //Refference ObjectIDTEMP.cs
-    private ObjectID objectID;
 
     public string mapID;
     public string shipID;
 
 	// Use this for initialization
-	void Start () {
-        objectID = GetComponent<ObjectID>();
-
-        //Clear string values at startup
-        mapID = string.Empty;
-        shipID = string.Empty;
-
-        print("Map ID = "+mapID);
-        print("Ship ID = "+shipID);
+	void Start ()
+	{
+		mapID = string.Empty;
+		shipID = string.Empty;
     }
 
-    //control functions
-    public void onClickMap()
+    /*
+		When a map is clicked, return the value to the catcher
+	*/
+    public void onMapClick()
+    {
+		mapID = EventSystem.current.currentSelectedGameObject.name;
+		print (mapID);
+    }
+
+    public void CleanUpMapValue()
     {
         mapID = string.Empty;
-        mapID = objectID.ObjectIDMap;
-
-        //Debug output
-        print("Current Value = " + mapID);
     }
 
-
-
-
+    public void CleanUpShipValue()
+    {
+        shipID = string.Empty;
+    }
 }
