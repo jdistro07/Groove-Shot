@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/UI/MainUI.unity
+    path: Assets/Scenes/UI/MainUI/MainUI.unity
     guid: 695149cbe6b463742b6166c9c57a8b44
+  - enabled: 1
+    path: Assets/Scenes/Stages/AbandonedDesert.unity
+    guid: 00000000000000000000000000000000

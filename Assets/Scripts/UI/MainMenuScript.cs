@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour {
 
@@ -49,6 +50,7 @@ public class MainMenuScript : MonoBehaviour {
         }
 	}
 
+    //Frame by frame monitoring
     private void Update()
     {
         if (!(id.mapID.Length == 0))    //for button confirm (Select Map Panel) ENABLE
@@ -126,5 +128,10 @@ public class MainMenuScript : MonoBehaviour {
     {
         shipSelection.SetActive(false);
         mapSelect.SetActive(true);
+    }
+
+    public void ClickPlay()
+    {
+        SceneManager.LoadScene(id.mapID);
     }
 }
