@@ -7699,13 +7699,14 @@ GameObject:
   - component: {fileID: 1059938690}
   - component: {fileID: 1059938692}
   - component: {fileID: 1059938691}
+  - component: {fileID: 1059938693}
   m_Layer: 5
   m_Name: PanelMenuBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1059938690
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7759,6 +7760,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1059938689}
+--- !u!114 &1059938693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1059938689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253dc9fe69bd59c4cb8af9242d199781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 1059938689}
 --- !u!4 &1067331104 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b899b109968a14f4797d7cd111cb647b, type: 3}
@@ -8250,6 +8263,7 @@ GameObject:
   - component: {fileID: 1124305286}
   - component: {fileID: 1124305285}
   - component: {fileID: 1124305284}
+  - component: {fileID: 1124305288}
   m_Layer: 5
   m_Name: CanvPauseMenu
   m_TagString: Untagged
@@ -8333,6 +8347,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1124305288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124305283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1da86d8c523204a96c0d814abe8903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 1059938689}
 --- !u!1 &1133102412
 GameObject:
   m_ObjectHideFlags: 0
@@ -8588,7 +8614,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1155855794}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1059938693}
+        m_MethodName: onClickResume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1155855794
