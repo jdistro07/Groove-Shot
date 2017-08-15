@@ -7,6 +7,7 @@ public class menuOverlayController : MonoBehaviour {
 
     //for pause
     public GameObject pausePanel;
+    public GameObject hud;
 
     // Use this for initialization
     void Start () {
@@ -18,6 +19,7 @@ public class menuOverlayController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pausePanel.SetActive(true);
+            hud.SetActive(false);
         }
     }
 }

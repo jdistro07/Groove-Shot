@@ -7986,6 +7986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 1059938689}
+  hud: {fileID: 1490717668}
 --- !u!4 &1067331104 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b899b109968a14f4797d7cd111cb647b, type: 3}
@@ -8574,6 +8575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 1059938689}
+  hud: {fileID: 1490717668}
 --- !u!1 &1133102412
 GameObject:
   m_ObjectHideFlags: 0
