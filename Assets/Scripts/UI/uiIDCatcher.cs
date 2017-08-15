@@ -6,12 +6,6 @@ using UnityEngine.UI;
 
 public class uiIDCatcher : MonoBehaviour {
 
-    //Script Referrence
-    private objDetails details;
-
-    //info section
-    public string MapName;
-
     //UIElements
     public Text dispMapName;
 
@@ -21,8 +15,6 @@ public class uiIDCatcher : MonoBehaviour {
 
     private void Awake()
     {
-        //script components
-        details = GetComponent<objDetails>();
 
         //Initialize empty IDs upon awake
         mapID = string.Empty;
@@ -40,9 +32,8 @@ public class uiIDCatcher : MonoBehaviour {
 
         //Get map ID based  on GameObject name
 		mapID = EventSystem.current.currentSelectedGameObject.name;
-        MapName = details.displayName;
 
-        dispMapName.text = MapName;
+        dispMapName.text = mapID;
 
         //print(mapID);
     }
@@ -52,6 +43,7 @@ public class uiIDCatcher : MonoBehaviour {
     public void CleanUpMapValue() //Cleanup values upon exit Map Selection
     {
         mapID = string.Empty;
+        dispMapName.text = "[Map Name]";
     }
 
 
