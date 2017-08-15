@@ -9,21 +9,8 @@ public class Health : MonoBehaviour
     public float health;
     public float armor;
 
-    //UI
-    public Text dispHP;
-
     //crash collision components
     public float crashThreshold; //the minimum amount of unit required to affect the object
-
-    private void Start()
-    {
-        //dispHP = health;
-    }
-
-    private void Update()
-    {
-        //test = dispHP.Invoke.ToString;
-    }
 
     public void OnCollisionEnter(Collision collide)
     {

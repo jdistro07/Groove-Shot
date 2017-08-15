@@ -4117,7 +4117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 530.2, y: 19.5}
+  m_AnchoredPosition: {x: 530.19995, y: 19.5}
   m_SizeDelta: {x: -448.3, y: -39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527405554
@@ -8753,6 +8753,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1233065660060590, guid: 064a2bdc34dbbc14dac6e9b435ebb7f7, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 064a2bdc34dbbc14dac6e9b435ebb7f7, type: 2}
   m_IsPrefabParent: 0
@@ -11742,6 +11746,7 @@ GameObject:
   - component: {fileID: 1490717669}
   - component: {fileID: 1490717671}
   - component: {fileID: 1490717670}
+  - component: {fileID: 1490717672}
   m_Layer: 5
   m_Name: PanelHUD
   m_TagString: Untagged
@@ -11804,6 +11809,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1490717668}
+--- !u!114 &1490717672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490717668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dfbe425fcf924b4b9b9c6598cecbe94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispHP: {fileID: 158816593}
 --- !u!4 &1492185228 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b899b109968a14f4797d7cd111cb647b, type: 3}
