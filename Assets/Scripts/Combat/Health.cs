@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-	//basic health components
-	public float health;
-	public float armor;
+    //basic health components
+    public float health;
+    public float armor;
 
-	//crash collision components
-	public float crashThreshold; //the minimum amount of unit required to affect the object
+    //crash collision components
+    public float crashThreshold; //the minimum amount of unit required to affect the object
 
-	public void OnCollisionEnter(Collision collide)
-	{
-		//crash collision damage
-		if(collide.relativeVelocity.magnitude > crashThreshold)
-		{
-			health = health - (collide.relativeVelocity.magnitude / armor);
-		}
+    public void OnCollisionEnter(Collision collide)
+    {
+        //crash collision damage
+        if (collide.relativeVelocity.magnitude > crashThreshold && health > 0)
+        {
+            health = Mathf.Round(health - (collide.relativeVelocity.magnitude / armor));
+        }
 	}
 }
