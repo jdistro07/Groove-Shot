@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spawn
   - Buildings and Environment
+  - Terrain
   layers:
   - Default
   - TransparentFX
