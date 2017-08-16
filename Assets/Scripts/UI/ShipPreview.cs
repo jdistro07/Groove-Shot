@@ -38,6 +38,7 @@ public class ShipPreview : MonoBehaviour {
     {
         shipList[index].SetActive(false);
 
+        //if last index then go back to the first index
         if (index == shipList.Count-1)
         {
             index = 0;
@@ -48,13 +49,13 @@ public class ShipPreview : MonoBehaviour {
         }
 
         shipList[index].SetActive(true);
-        Debug.Log(index);
     }
 
     public void bntPrev()
     {
         shipList[index].SetActive(false);
 
+        //if first index then go back to the last index
         if(index == 0)
         {
             index = shipList.Count - 1;
@@ -65,7 +66,5 @@ public class ShipPreview : MonoBehaviour {
         }
         
         shipList[index].SetActive(true);
-
-        Debug.Log(index);
     }
 }
