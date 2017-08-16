@@ -5,12 +5,14 @@ using UnityEngine;
 public class PanelMenuController : MonoBehaviour {
 
     public GameObject pausePanel;
+    public GameObject hud;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pausePanel.SetActive(false);
+            hud.SetActive(true);
         }
     }
 
@@ -18,5 +20,6 @@ public class PanelMenuController : MonoBehaviour {
     public void onClickResume()
     {
         pausePanel.SetActive(false);
+        hud.SetActive(true);
     }
 }
