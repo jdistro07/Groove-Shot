@@ -5,6 +5,7 @@ using UnityEngine;
 public class RemoveObjectOnCollission : MonoBehaviour
 {
     public AudioClip bulletCrash;
+	public float damage;
     private float shotTime;
     public float airTime;
 

@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 82978676099384652}
   m_Layer: 0
   m_Name: bullet1Mat
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,4 +221,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletCrash: {fileID: 8300000, guid: 9ddc1d5ad7e0e5441a4560f018f0392d, type: 3}
-  airTime: 0.2
+  damage: 50
+  airTime: 1
