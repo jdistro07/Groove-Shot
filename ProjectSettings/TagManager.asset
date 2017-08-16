@@ -5,8 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spawn
-  - Buildings and Environment
-  - Terrain
+  - bullet
   layers:
   - Default
   - TransparentFX
