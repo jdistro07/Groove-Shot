@@ -5594,6 +5594,7 @@ GameObject:
   - component: {fileID: 782125800}
   - component: {fileID: 782125804}
   - component: {fileID: 782125799}
+  - component: {fileID: 782125805}
   m_Layer: 0
   m_Name: PLCamera
   m_TagString: Untagged
@@ -5690,6 +5691,18 @@ MonoBehaviour:
   target: {fileID: 1151305064}
   yOffset: 84.79
   zOffset: -35.7
+--- !u!114 &782125805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 782125798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4b42931c8f010468c5bbf6cf330f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InGame: {fileID: 0}
 --- !u!1001 &785938306
 Prefab:
   m_ObjectHideFlags: 0
