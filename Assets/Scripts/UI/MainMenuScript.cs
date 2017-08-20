@@ -31,7 +31,7 @@ public class MainMenuScript : MonoBehaviour {
     void Start () {
         id = GetComponent<uiIDCatcher>();
         
-        //Refferences
+        //Referrences
         quitMenu.GetComponent<GameObject>();
         mainButtons.GetComponent<GameObject>();
         mapSelect.GetComponent<GameObject>();
@@ -40,8 +40,9 @@ public class MainMenuScript : MonoBehaviour {
         //Audio
         audioSource = GetComponent<AudioSource>();
 
-        //Default States
+        //DOn start States
         quitMenu.SetActive(false);
+        panelOptions.SetActive(false);
 
         //Button default states
 
@@ -64,9 +65,18 @@ public class MainMenuScript : MonoBehaviour {
         }
     }
 
+
+    //Options
     public void ClickOptions()
     {
         panelOptions.SetActive(true);
+        mainButtons.SetActive(false);
+    }
+
+    public void ClickCloseOptions()
+    {
+        panelOptions.SetActive(false);
+        mainButtons.SetActive(true);
     }
 
     //Sound Efects

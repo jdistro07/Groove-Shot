@@ -10,10 +10,13 @@ It is in charge of initializing game setting values for the
 whole game not making a reusable configuration file.
 */
 
-public class InGameSettingsManager : MonoBehaviour {
+public class OptionsManager : MonoBehaviour {
+
+    //Panel Controls
+    public GameObject panel_Options;
 
     //Scripts
-    private GameSettings gameSettings;
+    private GameSettingsHandler gameSettings;
 
     //Option controls
     //Audio panel controls

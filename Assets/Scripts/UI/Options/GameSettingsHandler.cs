@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameSettings : MonoBehaviour {
+public class GameSettingsHandler : MonoBehaviour {
 
     public float musicVoulme;
     public float sfxVolume;
