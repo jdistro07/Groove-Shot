@@ -14,6 +14,7 @@ public class MainMenuScript : MonoBehaviour {
     public GameObject mainButtons;
     public GameObject mapSelect;
     public GameObject shipSelection;
+    public GameObject panelOptions;
 
     //Buttons
     public Button btnConfirm; //This control can be found on the MapSelection Panel
@@ -61,6 +62,11 @@ public class MainMenuScript : MonoBehaviour {
         {
             btnConfirm.interactable = false;
         }
+    }
+
+    public void ClickOptions()
+    {
+        panelOptions.SetActive(true);
     }
 
     //Sound Efects
