@@ -7,6 +7,9 @@ TagManager:
   - Spawn
   - bullet
   - Main UI Interface
+  - Buildings and Environment
+  - Terrain
+  - Preview
   layers:
   - Default
   - TransparentFX

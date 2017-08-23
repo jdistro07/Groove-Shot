@@ -148,6 +148,13 @@ public class MainMenuScript : MonoBehaviour {
 
     public void ClickPlay()
     {
+        StartCoroutine(ClickPlayDelay());
+    }
+
+    //Coroutine for Play button
+    private IEnumerator ClickPlayDelay()
+    {
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(id.mapID);
     }
 }
