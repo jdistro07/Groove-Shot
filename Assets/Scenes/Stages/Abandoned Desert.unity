@@ -5591,7 +5591,6 @@ GameObject:
   - component: {fileID: 782125800}
   - component: {fileID: 782125804}
   - component: {fileID: 782125799}
-  - component: {fileID: 782125805}
   m_Layer: 0
   m_Name: PLCamera
   m_TagString: Untagged
@@ -5685,29 +5684,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2962acc95f4974b8c023542e1553d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1151305064}
+  playerObject: {fileID: 0}
   yOffset: 84.79
   zOffset: -35.7
---- !u!114 &782125805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 782125798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f4b42931c8f010468c5bbf6cf330f6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel_Options: {fileID: 0}
-  slider_music: {fileID: 0}
-  slider_sfx: {fileID: 0}
-  dropDown_resolution: {fileID: 0}
-  dropDown_antiAlias: {fileID: 0}
-  toggle_bloom: {fileID: 0}
-  toggle_motionBlur: {fileID: 0}
-  toggle_vsync: {fileID: 0}
-  InGame: {fileID: 0}
+  offset: {x: 0, y: 84.79, z: -35.7}
+  enableSmooth: 1
+  smoothSpeed: 0.4
 --- !u!1001 &785938306
 Prefab:
   m_ObjectHideFlags: 0
@@ -8666,11 +8648,6 @@ Transform:
   m_Father: {fileID: 1100368753}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1151305064 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4455059760531318, guid: c612a6bd798cb6442bef29cf55816f14,
-    type: 2}
-  m_PrefabInternal: {fileID: 1406796229}
 --- !u!1001 &1151515626
 Prefab:
   m_ObjectHideFlags: 0
@@ -11259,6 +11236,21 @@ Prefab:
     - target: {fileID: 4455059760531318, guid: c612a6bd798cb6442bef29cf55816f14, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 82788611383542892, guid: c612a6bd798cb6442bef29cf55816f14,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54247570103455782, guid: c612a6bd798cb6442bef29cf55816f14,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114205445389599820, guid: c612a6bd798cb6442bef29cf55816f14,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c612a6bd798cb6442bef29cf55816f14, type: 2}
