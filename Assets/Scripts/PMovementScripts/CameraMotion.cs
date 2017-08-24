@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +16,25 @@ public class CameraMotion : MonoBehaviour {
 
     void Start()
     {
-        playerObject = GameObject.FindGameObjectWithTag("Player");
+        //playerObject = GameObject.FindGameObjectWithTag("Player");
+        tracker();
+    }
+
+    void Update()
+    {
+        if (playerObject == null)
+        {
+            Debug.Log("Camera Status: Finding player");
+
+            try
+            {
+                tracker();
+            }
+            catch (NullReferenceException ex)
+            {
+                Debug.Log(ex);
+            }
+        }
     }
 
     void LateUpdate() {
@@ -33,5 +52,10 @@ public class CameraMotion : MonoBehaviour {
              playerObject.transform.position.y + yOffset, 
              playerObject.transform.position.z + zOffset);
         }
+    }
+
+    public void tracker()
+    {
+        playerObject = GameObject.FindGameObjectWithTag("Player");
     }
 }
