@@ -13,11 +13,13 @@ public class uiIDCatcher : MonoBehaviour {
     public string mapID;
     public string shipID;
 
+    static public string mapIDLoader;
+    static public string shipIDLoader;
+
     private void Awake()
     {
-        //Initialize empty IDs upon awake
-        mapID = string.Empty;
-        shipID = string.Empty;
+        //Show loaded values
+        Debug.Log(mapIDLoader+" "+shipIDLoader);
     }
 
     /*
@@ -56,5 +58,11 @@ public class uiIDCatcher : MonoBehaviour {
         shipID = string.Empty;
         var id = GameObject.FindGameObjectWithTag("Preview").GetComponent<ShipInfo>();
         shipID = id.id;
+
+        //store values to static var loaders
+        shipIDLoader = shipID;
+        Debug.Log(shipIDLoader);
+        mapIDLoader = mapID;
+        Debug.Log(mapIDLoader);
     }
 }
