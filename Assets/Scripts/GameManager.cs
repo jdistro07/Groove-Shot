@@ -9,49 +9,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
-
+public class GameManager : MonoBehaviour
+{
     //scripts
     private uiIDCatcher id;
 
-    //Spawn array
-    public GameObject[] spawnPoints;
+    public static string lvl;
+    public static string ship;
 
-    //spawn index for storing numbers
-    public int spawnIndex;
 
-    public string shipID;
-    public GameObject playerCharacter;
+    //loaders
+    AsyncOperation async;
 
     private void Awake()
     {
-        shipID = id.shipID;
-        Debug.Log(shipID);
+        Debug.Log("[Game Manger] Map: "+lvl);
+        Debug.Log("[Game Manager] Ship: "+ship);
     }
 
-    void Start()
+    private void Start()
     {
-        playerCharacter = Resources.Load(shipID) as GameObject;
-        spawnPlayer();
+        StartCoroutine(Load());
     }
 
-    // Update is called once per frame
-    void Update () {
-        
-	}
-
-    void spawnPlayer()
+    public void uiIDClassFetcher()
     {
-        /*
-         This function will choose a random index from the GameObject array "spawnpoints"(variable)
-         for random Empty Game Objects
-         for spawning players
-         */
-        spawnIndex = Random.Range(0, spawnPoints.Length);
-        Vector3 spawnLocation = spawnPoints[spawnIndex].transform.position;
-        Debug.Log(spawnIndex);
+        var uiID = GameObject.FindGameObjectWithTag("Main UI Interface").GetComponent<uiIDCatcher>();
+        lvl = uiID.mapID;
+        ship = uiID.shipID;
 
-        Instantiate(playerCharacter, spawnLocation, transform.rotation);
+        //Debug.Log(lvl+" "+ship);
+    }
+
+    private IEnumerator Load()
+    {
+        async = SceneManager.LoadSceneAsync(lvl);
+
+
+        while (!async.isDone == false)
+        {
+            if (async.progress == 0.9f)
+            {
+                Mathf.Clamp01(async.progress/0.9f);
+                async.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
+
+        Debug.Log(async.progress);
     }
 }

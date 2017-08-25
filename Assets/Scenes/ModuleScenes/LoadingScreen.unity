@@ -117,6 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331062486}
   - component: {fileID: 331062485}
+  - component: {fileID: 331062487}
   m_Layer: 0
   m_Name: Loader
   m_TagString: Untagged
@@ -151,6 +152,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331062487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 331062484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a758861af6cf6d342b65413c32dbb609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints: []
+  spawnIndex: 0
+  shipID: 
+  playerCharacter: {fileID: 0}
 --- !u!1 &364978891
 GameObject:
   m_ObjectHideFlags: 0

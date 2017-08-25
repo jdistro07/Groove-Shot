@@ -13,14 +13,8 @@ public class uiIDCatcher : MonoBehaviour {
     public string mapID;
     public string shipID;
 
-    static public string mapIDLoader;
-    static public string shipIDLoader;
-
-    private void Awake()
-    {
-        //Show loaded values
-        Debug.Log(mapIDLoader+" "+shipIDLoader);
-    }
+    public static string mapIDLoader;
+    public static string shipIDLoader;
 
     /*
 		When a map is clicked, return the value to the catcher
@@ -62,6 +56,7 @@ public class uiIDCatcher : MonoBehaviour {
         //store values to static var loaders
         shipIDLoader = shipID;
         Debug.Log(shipIDLoader);
+
         mapIDLoader = mapID;
         Debug.Log(mapIDLoader);
     }
