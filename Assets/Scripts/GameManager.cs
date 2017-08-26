@@ -10,6 +10,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -29,11 +31,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("[Game Manager] Ship: "+ship);
     }
 
-    private void Start()
-    {
-        StartCoroutine(Load());
-    }
-
     public void uiIDClassFetcher()
     {
         var uiID = GameObject.FindGameObjectWithTag("Main UI Interface").GetComponent<uiIDCatcher>();
@@ -43,22 +40,15 @@ public class GameManager : MonoBehaviour
         //Debug.Log(lvl+" "+ship);
     }
 
-    private IEnumerator Load()
+    public IEnumerator Load()
     {
         async = SceneManager.LoadSceneAsync(lvl);
 
-
-        while (!async.isDone == false)
+        while (!async.isDone)
         {
-            if (async.progress == 0.9f)
-            {
-                Mathf.Clamp01(async.progress/0.9f);
-                async.allowSceneActivation = true;
-            }
-
+            float p = Mathf.Clamp01(async.progress/.9f);
+            Debug.Log(p);
             yield return null;
         }
-
-        Debug.Log(async.progress);
     }
 }

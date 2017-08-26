@@ -118,9 +118,10 @@ GameObject:
   - component: {fileID: 331062486}
   - component: {fileID: 331062485}
   - component: {fileID: 331062487}
+  - component: {fileID: 331062488}
   m_Layer: 0
   m_Name: Loader
-  m_TagString: Untagged
+  m_TagString: Loader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,10 +164,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a758861af6cf6d342b65413c32dbb609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints: []
-  spawnIndex: 0
-  shipID: 
-  playerCharacter: {fileID: 0}
+--- !u!114 &331062488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 331062484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419668a9d992f074fa8c8df5cd5174da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &364978891
 GameObject:
   m_ObjectHideFlags: 0
