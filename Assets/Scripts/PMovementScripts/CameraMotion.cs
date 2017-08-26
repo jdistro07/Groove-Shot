@@ -22,40 +22,42 @@ public class CameraMotion : MonoBehaviour {
 
     void Update()
     {
-        if (playerObject == null)
-        {
-            Debug.Log("Camera Status: Finding player");
-
-            try
-            {
-                tracker();
-            }
-            catch (NullReferenceException ex)
-            {
-                Debug.Log(ex);
-            }
-        }
+       tracker();
     }
 
     void LateUpdate() {
-
-        Vector3 desiredPosition = new Vector3();
-        desiredPosition = playerObject.transform.position+offset;
-
-        if (enableSmooth)
+        try
         {
-            transform.position = Vector3.Lerp(transform.position,desiredPosition,smoothSpeed);
+            Vector3 desiredPosition = new Vector3();
+            desiredPosition = playerObject.transform.position + offset;
+
+            if (enableSmooth)
+            {
+                transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            }
+            else
+            {
+                transform.position = new Vector3(playerObject.transform.position.x,
+                 playerObject.transform.position.y + yOffset,
+                 playerObject.transform.position.z + zOffset);
+            }
         }
-        else
+        catch (NullReferenceException nre)
         {
-            transform.position = new Vector3(playerObject.transform.position.x, 
-             playerObject.transform.position.y + yOffset, 
-             playerObject.transform.position.z + zOffset);
+            Debug.Log("Finding Player: "+nre);
         }
     }
 
     public void tracker()
     {
-        playerObject = GameObject.FindGameObjectWithTag("Player");
+        try
+        {
+            playerObject = GameObject.FindGameObjectWithTag("Player");
+        }
+        catch
+        {
+            Debug.Log("Searching Player...");
+        }
+        
     }
 }
