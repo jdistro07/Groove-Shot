@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/MainUI/MainUI.unity
     guid: 695149cbe6b463742b6166c9c57a8b44
   - enabled: 1
-    path: Assets/Scenes/ModuleScenes/LoadingScreen.unity
+    path: Assets/Scenes/UI/ModuleScenes/LoadingScreen.unity
     guid: 39bf8099eeb24284aa7d8a21b10a1b52
   - enabled: 1
     path: Assets/Scenes/Stages/Abandoned Desert.unity
