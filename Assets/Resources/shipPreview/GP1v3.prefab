@@ -117,9 +117,10 @@ GameObject:
   - component: {fileID: 33766324731889674}
   - component: {fileID: 23313875106994464}
   - component: {fileID: 95799641739768964}
+  - component: {fileID: 114323458417323968}
   m_Layer: 0
-  m_Name: GP1
-  m_TagString: Untagged
+  m_Name: GP1v3
+  m_TagString: Preview
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -599,3 +600,15 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114323458417323968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661826410127418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55caae1be81ab584b93ee92bf3c8035e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: GP1v3

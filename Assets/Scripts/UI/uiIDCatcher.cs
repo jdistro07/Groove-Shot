@@ -13,15 +13,8 @@ public class uiIDCatcher : MonoBehaviour {
     public string mapID;
     public string shipID;
 
-    private void Awake()
-    {
-
-        //Initialize empty IDs upon awake
-        mapID = string.Empty;
-        shipID = string.Empty;
-    }
-
-
+    public static string mapIDLoader;
+    public static string shipIDLoader;
 
     /*
 		When a map is clicked, return the value to the catcher
@@ -51,5 +44,20 @@ public class uiIDCatcher : MonoBehaviour {
     public void CleanUpShipValue() //Cleanup values upon exit Ship Selection
     {
         shipID = string.Empty;
+    }
+
+    //For ship preview
+    public void OnClickCatcher()
+    {
+        shipID = string.Empty;
+        var id = GameObject.FindGameObjectWithTag("Preview").GetComponent<ShipInfo>();
+        shipID = id.id;
+
+        //store values to static var loaders
+        shipIDLoader = shipID;
+        Debug.Log(shipIDLoader);
+
+        mapIDLoader = mapID;
+        Debug.Log(mapIDLoader);
     }
 }

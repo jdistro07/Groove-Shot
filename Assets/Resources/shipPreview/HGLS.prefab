@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33607431922294598}
   - component: {fileID: 23530322540279234}
   - component: {fileID: 95604327796200898}
+  - component: {fileID: 114244252316576970}
   m_Layer: 0
-  m_Name: HGLSPrev
-  m_TagString: Untagged
+  m_Name: HGLS
+  m_TagString: Preview
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,3 +381,15 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114244252316576970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1077473223509526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55caae1be81ab584b93ee92bf3c8035e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: HGLS

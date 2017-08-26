@@ -9,6 +9,8 @@ public class ShipPreview : MonoBehaviour {
     public List<GameObject> shipList;
     private int index = 0;
 
+    public string idCatcher;
+
     public Button btnNext;
 
     // Use this for initialization
@@ -56,7 +58,7 @@ public class ShipPreview : MonoBehaviour {
         shipList[index].SetActive(false);
 
         //if first index then go back to the last index
-        if(index == 0)
+        if (index == 0)
         {
             index = shipList.Count - 1;
         }
@@ -64,7 +66,7 @@ public class ShipPreview : MonoBehaviour {
         {
             index--;
         }
-        
+
         shipList[index].SetActive(true);
     }
 }
