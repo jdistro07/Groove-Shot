@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
     public static string lvl;
     public static string ship;
 
-
     //loaders
     AsyncOperation async;
 
