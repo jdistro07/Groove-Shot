@@ -142,9 +142,9 @@ GameObject:
   - component: {fileID: 54247570103455782}
   - component: {fileID: 64297901713592056}
   - component: {fileID: 114644117815698022}
-  - component: {fileID: 114320447999428126}
-  - component: {fileID: 114205445389599820}
   - component: {fileID: 82788611383542892}
+  - component: {fileID: 114205445389599820}
+  - component: {fileID: 114320447999428126}
   - component: {fileID: 81835964284543658}
   m_Layer: 0
   m_Name: GP1v3
@@ -329,7 +329,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1593430724396622}
   m_LocalRotation: {x: -0, y: 0.19469015, z: -0, w: 0.9808648}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalPosition: {x: 0, y: 2.39, z: 0}
   m_LocalScale: {x: 1.2769997, y: 1.5761634, z: 0.5848653}
   m_Children:
   - {fileID: 4569670998653024}
