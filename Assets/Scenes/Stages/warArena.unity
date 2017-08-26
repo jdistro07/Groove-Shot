@@ -148,6 +148,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114814966653111708, guid: 064a2bdc34dbbc14dac6e9b435ebb7f7,
+        type: 2}
+      propertyPath: backwardSpeed
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233065660060590, guid: 064a2bdc34dbbc14dac6e9b435ebb7f7, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 064a2bdc34dbbc14dac6e9b435ebb7f7, type: 2}
   m_IsPrefabParent: 0
@@ -15592,11 +15601,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!4 &1980166531 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4707291964106970, guid: 064a2bdc34dbbc14dac6e9b435ebb7f7,
-    type: 2}
-  m_PrefabInternal: {fileID: 124864027}
 --- !u!1 &2112356774
 GameObject:
   m_ObjectHideFlags: 0
@@ -15774,4 +15778,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2962acc95f4974b8c023542e1553d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1980166531}
+  playerObject: {fileID: 0}
+  yOffset: 0
+  zOffset: 0
+  offset: {x: 0, y: 100, z: 0}
+  enableSmooth: 1
+  smoothSpeed: 0.125

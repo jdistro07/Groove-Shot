@@ -4607,7 +4607,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1593430724396622, guid: c612a6bd798cb6442bef29cf55816f14, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c612a6bd798cb6442bef29cf55816f14, type: 2}
@@ -14644,6 +14644,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1921119625}
+  - component: {fileID: 1921119626}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -14664,6 +14665,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1921119626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921119624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a758861af6cf6d342b65413c32dbb609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1926383468
 Prefab:
   m_ObjectHideFlags: 0
