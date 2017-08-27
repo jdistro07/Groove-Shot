@@ -10,8 +10,11 @@ public class PanelMenuController : MonoBehaviour {
     private Vector2 hotSpot = Vector2.zero;
     private CursorMode cursorMode = CursorMode.Auto;
 
+    //ui Game Objects
     public GameObject pausePanel;
     public GameObject hud;
+    public GameObject confirmation;
+    public GameObject pausePanelMenu;
 
     void OnEnable()
     {
@@ -27,8 +30,8 @@ public class PanelMenuController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pausePanel.SetActive(false);
             hud.SetActive(true);
+            pausePanel.SetActive(false);
         }
     }
 
@@ -37,5 +40,17 @@ public class PanelMenuController : MonoBehaviour {
     {
         pausePanel.SetActive(false);
         hud.SetActive(true);
+    }
+
+    public void OnClickLeaveGame()
+    {
+        confirmation.SetActive(true);
+        pausePanelMenu.SetActive(false);
+    }
+
+    public void OnClickCancel()
+    {
+        confirmation.SetActive(false);
+        pausePanelMenu.SetActive(true);
     }
 }

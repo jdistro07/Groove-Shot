@@ -40,7 +40,7 @@ public class MainMenuScript : MonoBehaviour {
         //Audio
         audioSource = GetComponent<AudioSource>();
 
-        //DOn start States
+        //On start States
         quitMenu.SetActive(false);
         panelOptions.SetActive(false);
 

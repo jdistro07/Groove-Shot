@@ -1,21 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour {
 
     public Text dispHP;
 
-    private void Awake()
+    void Start()
     {
-        var hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-        dispHP.text = hp.health.ToString();
+        HUDTracker();
     }
 
     // Update is called once per frame
     void Update () {
-        var hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-        dispHP.text = hp.health.ToString();
+        HUDTracker();
+    }
+
+    void HUDTracker()
+    {
+        try
+        {
+            var hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+            dispHP.text = hp.health.ToString();
+        }
+        catch(NullReferenceException nre)
+        {
+            Debug.Log("[HUDController] Finding Player: "+nre);
+        }
     }
 }

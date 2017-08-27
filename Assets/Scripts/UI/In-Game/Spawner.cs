@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Spawner : MonoBehaviour {
 
@@ -19,9 +20,15 @@ public class Spawner : MonoBehaviour {
     void Spawn_Player()
     {
         var res = Resources.Load("playerShips/" + playerShip);
-        index = Random.Range(0,spawnPoints.Length);
+        index = UnityEngine.Random.Range(0, spawnPoints.Length);
 
-        Debug.Log(index);
-        Instantiate(res,spawnPoints[index].transform.position,spawnPoints[index].transform.rotation);
+        try
+        {
+            Debug.Log(index);
+            Instantiate(res, spawnPoints[index].transform.position, spawnPoints[index].transform.rotation);
+        }
+        catch(ArgumentException ae){
+            Debug.Log("[Spawner] Cannot Spawn Ship: " + ae);
+        }
     }
 }
