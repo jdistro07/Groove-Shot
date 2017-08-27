@@ -8278,6 +8278,7 @@ GameObject:
   - component: {fileID: 1059938692}
   - component: {fileID: 1059938691}
   - component: {fileID: 1059938693}
+  - component: {fileID: 1059938694}
   m_Layer: 5
   m_Name: PanelPauseMenuBG
   m_TagString: Untagged
@@ -8354,6 +8355,17 @@ MonoBehaviour:
   hud: {fileID: 1490717668}
   confirmation: {fileID: 316832703}
   pausePanelMenu: {fileID: 1619499305}
+--- !u!114 &1059938694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1059938689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ab0f916a5157c4288faa9a3f350fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1067331104 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b899b109968a14f4797d7cd111cb647b, type: 3}

@@ -12,6 +12,7 @@ TagManager:
   - Preview
   - Loader
   - Game Manager
+  - Turret
   layers:
   - Default
   - TransparentFX
