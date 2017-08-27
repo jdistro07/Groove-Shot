@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("[Game Manger] Map: "+lvl);
-        Debug.Log("[Game Manager] Ship: "+ship);
+        Debug.Log("[Game Manger] Map: " + lvl);
+        Debug.Log("[Game Manager] Ship: " + ship);
     }
 
     public void uiIDClassFetcher()
@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
         //Debug.Log(lvl+" "+ship);
     }
 
+    public void OnLeaveGameConfirm(){
+        lvl = "MainUI";
+        SceneManager.LoadScene("LoadingScreen");
+    }
+
     public IEnumerator Load()
     {
         async = SceneManager.LoadSceneAsync(lvl);
@@ -48,6 +53,15 @@ public class GameManager : MonoBehaviour
             float p = Mathf.Clamp01(async.progress/.9f);
             Debug.Log(p);
             yield return null;
+        }
+
+        if (lvl == "MainUI")
+        {
+            lvl = string.Empty;
+            ship = string.Empty;
+
+            Debug.Log("[GameManager] lvl = "+lvl);
+            Debug.Log("[GameManager] ship = "+ship);
         }
     }
 }

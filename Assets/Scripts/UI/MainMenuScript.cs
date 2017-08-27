@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour {
 
+    //cursor
+    private Vector2 hotSpot = Vector2.zero;
+    private CursorMode cursorMode = CursorMode.Auto;
+
     //Scripts
     private uiIDCatcher id;
 
@@ -27,6 +31,11 @@ public class MainMenuScript : MonoBehaviour {
     public AudioClip clickSelection;
 
     public AudioSource audioSource;
+
+    private void Awake()
+    {
+        Cursor.SetCursor(null, hotSpot, cursorMode);
+    }
 
     void Start () {
         id = GetComponent<uiIDCatcher>();

@@ -32,4 +32,19 @@ public class menuOverlayController : MonoBehaviour {
             hud.SetActive(false);
         }
     }
+
+
+    private void OnEnables()
+    {
+        var movement = GameObject.Find("Player").GetComponent<HoverControls>();
+        Debug.Log("Enabled");
+        movement.enabled = false;
+    }
+
+    private void OnDisables()
+    {
+        var movement = GameObject.Find("Player").GetComponent<HoverControls>();
+
+        movement.enabled = true;
+    }
 }
