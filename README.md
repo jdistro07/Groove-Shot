@@ -25,6 +25,4 @@ ASSET SERIALIZATION
 Mode: Force Text
 ```
 
-If you got this already set-up, go to the next step.
-
 4. Clone the project and open the folder with Unity 3D
