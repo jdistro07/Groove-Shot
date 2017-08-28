@@ -7,9 +7,7 @@ This README would normally document whatever steps are necessary to get your app
  we release the game after multiple features approval. This repository can only be accessed by those people who are permitted and collaborators <br/>
 are allowed to fork the repository.</p>
 
-'''
-Current Stage: Development
-'''
+'Current Stage: Development'
 
 ### How do I get set up? ###
 
