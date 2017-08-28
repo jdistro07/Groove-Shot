@@ -1,39 +1,30 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+New to this repo? The information below might help to set you up. If you got any necessary information to add, please contact the following people mentioned:
+
+### Talk to these people ###
+1. skildfrix
+2. CycleGround
+
+#G-Axis: [PROJECT] Groove Shot
 
 ### What is this repository for? ###
-<p>This repository is the SC(source code) of Groove Shot a top-down shooter game with highly advanced ships. From here <br/>
- we release the game after multiple features approval. This repository can only be accessed by those people who are permitted and collaborators <br/>
-are allowed to fork the repository.</p>
+This repository is the SC(source code) of Groove Shot a top-down shooter game with highly advanced ships. From here
+we release the game after multiple features approval. This repository can only be accessed by those people who are permitted and collaborators
+are allowed to fork the repository.
 
-'Current Stage: Development'
+### Getting Ready ###
+1. Install Unity 3D Personal
+2. Inside Unity 3D Personal, navigate to `Edit>Project Settings`
+3. On the Inspector panel change the following:
+```
+VERSION CONTROL
+Mode: Visible Meta Files
 
-### How do I get set up? ###
+ASSET SERIALIZATION
+Mode: Force Text
+```
 
-* Summary of set up
-* Configuration
-* Dependencies
-[Examining]
-* Database configuration
-[To be added]
-* How to run tests
-[To be added]
-* Deployment instructions
-<b>GOLDEN RULE (Alpha)<b>
-Game release shall be implemented only by the owner once approved.
+If you got this already set-up, go to the next step.
 
-Step-by-step (Ascending)
-<ol>
-<li>Commit your changes for approval</li>
-<li>A new build shall be deployed by the owner for testing</li>
-<li>Once the expected output has been met, the deployement of the build shall be released on public</li>
-</ol>
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-
-### Who do I talk to? ###
-* skildfrix
+4. Clone the project and open the folder with Unity 3D
