@@ -38,5 +38,4 @@ Step-by-step (Ascending)
 ### Who do I talk to? ###
 
 * Repo owner or admin
-Contact the administrators of the repo:
 1. skildfrix
