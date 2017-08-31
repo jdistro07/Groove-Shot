@@ -21,7 +21,7 @@ public class Pause : MonoBehaviour {
     {
         try
         {
-            var hover = GameObject.FindGameObjectWithTag("Player").GetComponent<HoverControls>();
+            var hover = GameObject.FindGameObjectWithTag("Player").GetComponent<HoverControlsLance>();
             //var fireExp = GameObject.FindGameObjectWithTag("Turret").GetComponentInChildren<ShootingExperimental>(); //Experimental script
             var fire = GameObject.FindGameObjectWithTag("Turret").GetComponentInChildren<Shooting>();
 
@@ -39,7 +39,7 @@ public class Pause : MonoBehaviour {
     {
         try
         {
-            var hover = GameObject.FindGameObjectWithTag("Player").GetComponent<HoverControls>();
+            var hover = GameObject.FindGameObjectWithTag("Player").GetComponent<HoverControlsLance>();
             //var fireExp = GameObject.FindGameObjectWithTag("Turret").GetComponentInChildren<ShootingExperimental>(); //Experimental script
             var fire = GameObject.FindGameObjectWithTag("Turret").GetComponentInChildren<Shooting>();
 

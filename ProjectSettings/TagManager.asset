@@ -13,6 +13,7 @@ TagManager:
   - Loader
   - Game Manager
   - Turret
+  - AI
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ship
   - 
   - 
   - 
