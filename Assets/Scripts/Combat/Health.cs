@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     //basic health components
     public float health;
     public float armor;
+    public GameObject destroyed;
 
     //crash collision components
     public float crashThreshold; //the minimum amount of unit required to affect the object
@@ -27,5 +28,11 @@ public class Health : MonoBehaviour
 				health = Mathf.Round(health - (collide.relativeVelocity.magnitude / armor));
 			}
 		}
+
+        if (health<=0)
+        {
+            Destroy(gameObject);
+            Instantiate(destroyed,transform.position,transform.rotation);
+        }
 	}
 }
