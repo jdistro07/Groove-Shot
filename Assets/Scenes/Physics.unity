@@ -11167,8 +11167,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1656457921}
+  - component: {fileID: 1656457922}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SettingsSingleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11187,6 +11188,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1656457922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1656457920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfad8e0279381294fad0e271990e9952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show: 1
+  colorChangeCycle: 3.5
+  qualitySettings: 2
+  arrayExample:
+  - 3
+  - 4
+  listExample:
+  - 2
+  - 0
+  enumExample: 1
+  classExample:
+    txt: abcd
 --- !u!1 &1703829192
 GameObject:
   m_ObjectHideFlags: 0
