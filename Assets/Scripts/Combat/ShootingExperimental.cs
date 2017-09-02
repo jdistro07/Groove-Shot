@@ -34,7 +34,7 @@ public class ShootingExperimental : MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetMouseButton(0))
+		if (Input.GetMouseButtonDown(0))
 		{
 			if (Time.time > fireDelay + lastShot && currentAmmo > 0)
 			{

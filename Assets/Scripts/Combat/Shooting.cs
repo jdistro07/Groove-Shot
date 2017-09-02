@@ -9,6 +9,9 @@ public class Shooting : MonoBehaviour
 	public Rigidbody projectile;
 	public Transform projectileOrigin;
 
+    //type
+    public bool OneShot;
+
 	//audio
 	public AudioClip cannonSound;
 
@@ -31,21 +34,43 @@ public class Shooting : MonoBehaviour
 
 	void Update ()
 	{
-        if (Input.GetMouseButton(0))
+        if (OneShot)
         {
-
-            if (Time.time > fireDelay + lastShot && currentAmmo > 0)
+            if (Input.GetMouseButtonDown(0))
             {
-                //deduct 1 bullet at a time
-                currentAmmo -= 1;
-                Rigidbody projectileInstance;
-                GetComponent<AudioSource>().PlayOneShot(cannonSound);
-                particleEffects.Emit(1);
+                if (Time.time > fireDelay + lastShot && currentAmmo > 0)
+                {
+                    //deduct 1 bullet at a time
+                    currentAmmo -= 1;
+                    Rigidbody projectileInstance;
+                    GetComponent<AudioSource>().PlayOneShot(cannonSound);
+                    particleEffects.Emit(1);
 
-                projectileInstance = Instantiate(projectile, projectileOrigin.position, projectileOrigin.rotation) as Rigidbody;
-                //projectileInstance.velocity = transform.TransformDirection (Vector3.forward * projectileSpeed);
-                projectileInstance.AddForce(projectileOrigin.forward * projectileSpeed);
-                lastShot = Time.time;
+                    projectileInstance = Instantiate(projectile, projectileOrigin.position, projectileOrigin.rotation) as Rigidbody;
+                    //projectileInstance.velocity = transform.TransformDirection (Vector3.forward * projectileSpeed);
+                    projectileInstance.AddForce(projectileOrigin.forward * projectileSpeed);
+                    lastShot = Time.time;
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetMouseButton(0))
+            {
+
+                if (Time.time > fireDelay + lastShot && currentAmmo > 0)
+                {
+                    //deduct 1 bullet at a time
+                    currentAmmo -= 1;
+                    Rigidbody projectileInstance;
+                    GetComponent<AudioSource>().PlayOneShot(cannonSound);
+                    particleEffects.Emit(1);
+
+                    projectileInstance = Instantiate(projectile, projectileOrigin.position, projectileOrigin.rotation) as Rigidbody;
+                    //projectileInstance.velocity = transform.TransformDirection (Vector3.forward * projectileSpeed);
+                    projectileInstance.AddForce(projectileOrigin.forward * projectileSpeed);
+                    lastShot = Time.time;
+                }
             }
         }
 	}
