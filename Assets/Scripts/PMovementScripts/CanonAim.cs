@@ -6,11 +6,6 @@ public class CanonAim : MonoBehaviour
 {
 	//private Vector3 mousePos;
 	//private float lastAngle;
-
-	void Start ()
-	{
-		
-	}
 	
 	// Update is called once per frame
 	void Update ()
