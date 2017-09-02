@@ -46,6 +46,10 @@ public class CameraMotion : MonoBehaviour {
         {
             Debug.Log("Finding Player: "+nre);
         }
+        catch(MissingReferenceException mre)
+        {
+            Debug.Log("[CameraMotion.cs] Error: "+mre);
+        }
     }
 
     public void tracker()

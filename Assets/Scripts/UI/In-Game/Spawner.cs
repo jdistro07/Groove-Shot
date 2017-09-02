@@ -6,7 +6,7 @@ using System;
 public class Spawner : MonoBehaviour {
 
     public GameObject[] spawnPoints;
-    public int index;
+    //public int index;
 
     public string playerShip;
 
@@ -17,8 +17,9 @@ public class Spawner : MonoBehaviour {
         Spawn_Player();
     }
 
-    void Spawn_Player()
+    public void Spawn_Player()
     {
+        int index;
         var res = Resources.Load("playerShips/" + playerShip);
         index = UnityEngine.Random.Range(0, spawnPoints.Length);
 
