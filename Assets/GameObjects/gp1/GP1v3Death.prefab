@@ -77,8 +77,8 @@ GameObject:
   - component: {fileID: 33109672402172460}
   - component: {fileID: 23460672607512962}
   - component: {fileID: 64281242807788122}
-  - component: {fileID: 114846938883556268}
   - component: {fileID: 82370637245168450}
+  - component: {fileID: 81458571565250664}
   m_Layer: 0
   m_Name: Turret_Cannon
   m_TagString: Turret
@@ -1096,6 +1096,13 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: 2ad7eb5fe7d0e364eaabf7c48f8a702c, type: 3}
+--- !u!81 &81458571565250664
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135642278206570}
+  m_Enabled: 1
 --- !u!81 &81859857373732106
 AudioListener:
   m_ObjectHideFlags: 1
@@ -1299,27 +1306,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114846938883556268
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1135642278206570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c22acfdf675b17c4db671e3b6d2bb237, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileSpeed: 120000
-  projectile: {fileID: 54981700931738778, guid: b1d53799e73c8c84592b3f6ff2c69ce0,
-    type: 2}
-  projectileOrigin: {fileID: 4287028916768392}
-  cannonSound: {fileID: 8300000, guid: 47a45c263de21f04a8b677a0bf81f34a, type: 3}
-  particleEffects: {fileID: 198455221095746218}
-  fireDelay: 0.3
-  maxAmmo: 7
-  currentAmmo: 0
-  reloadTime: 3.5
 --- !u!114 &114908324568884162
 MonoBehaviour:
   m_ObjectHideFlags: 1

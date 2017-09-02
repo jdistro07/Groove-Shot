@@ -27,6 +27,7 @@ public class HUDController : MonoBehaviour {
         }
         catch(NullReferenceException nre)
         {
+            dispHP.text = "0";
             Debug.Log("[HUDController] Finding Player: "+nre);
         }
     }
