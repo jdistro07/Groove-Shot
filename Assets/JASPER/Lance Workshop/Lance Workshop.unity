@@ -130,7 +130,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4514943868185750, guid: e1050890184146c49868f077235443c4, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 409.9
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4514943868185750, guid: e1050890184146c49868f077235443c4, type: 2}
       propertyPath: m_LocalRotation.x
@@ -206,7 +206,8 @@ Prefab:
       propertyPath: maxFollowOffset
       value: 40
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114398138227394872, guid: e1050890184146c49868f077235443c4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e1050890184146c49868f077235443c4, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &435061867
@@ -254,11 +255,52 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1412061430006270, guid: 19ff1606d5cd00d4bb3c7c4113bfed99, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19ff1606d5cd00d4bb3c7c4113bfed99, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &445556308 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1246150482308250, guid: e1050890184146c49868f077235443c4,
+    type: 2}
+  m_PrefabInternal: {fileID: 95743930}
+--- !u!114 &445556310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445556308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c670fdd6630054c91fa806d7cf10c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRange: 75
+  aimDistance: 60
+  rotationSpeed: 2
+--- !u!114 &445556311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445556308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a027b819e9c2c14faec6a808b7037a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  singleBarrel: 0
+  projectileSpeed: 120000
+  projectile: {fileID: 54981700931738778, guid: b1d53799e73c8c84592b3f6ff2c69ce0,
+    type: 2}
+  projectileOrigin: {fileID: 0}
+  cannonSound: {fileID: 8300000, guid: 31792a5b5165f5a42b2d3a214dcab22a, type: 3}
+  particleEffects: {fileID: 2130797071}
+  fireDelay: 1
+  maxAmmo: 10
+  currentAmmo: 0
+  reloadTime: 3.5
 --- !u!1001 &487145827
 Prefab:
   m_ObjectHideFlags: 0
@@ -723,3 +765,8 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!198 &2130797071 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198137730216496240, guid: e1050890184146c49868f077235443c4,
+    type: 2}
+  m_PrefabInternal: {fileID: 95743930}
