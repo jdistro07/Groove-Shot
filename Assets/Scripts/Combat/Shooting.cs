@@ -14,6 +14,7 @@ public class Shooting : MonoBehaviour
 
 	//audio
 	public AudioClip cannonSound;
+    public AudioSource audio_source;
 
 	//visual effects
 	public ParticleSystem particleEffects;
@@ -43,7 +44,7 @@ public class Shooting : MonoBehaviour
                     //deduct 1 bullet at a time
                     currentAmmo -= 1;
                     Rigidbody projectileInstance;
-                    GetComponent<AudioSource>().PlayOneShot(cannonSound);
+                    audio_source.PlayOneShot(cannonSound);
                     particleEffects.Emit(1);
 
                     projectileInstance = Instantiate(projectile, projectileOrigin.position, projectileOrigin.rotation) as Rigidbody;
