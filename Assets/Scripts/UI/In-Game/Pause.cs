@@ -21,12 +21,14 @@ public class Pause : MonoBehaviour {
     {
         try
         {
-            var hover = GameObject.FindGameObjectWithTag("Player").GetComponent<HoverControlsLance>();
+            var turret_aim = GameObject.FindGameObjectWithTag("TurretRotate").GetComponent<CanonAim>();
             //var fireExp = GameObject.FindGameObjectWithTag("Turret").GetComponentInChildren<ShootingExperimental>(); //Experimental script
             var fire = GameObject.FindGameObjectWithTag("Turret").GetComponentInChildren<Shooting>();
 
             //fireExp.enabled = false;
             fire.enabled = false;
+            turret_aim.enabled = false;
+
         }
         catch (NullReferenceException nre)
         {
@@ -39,12 +41,13 @@ public class Pause : MonoBehaviour {
     {
         try
         {
-            var hover = GameObject.FindGameObjectWithTag("Player").GetComponent<HoverControlsLance>();
+            var turret_aim = GameObject.FindGameObjectWithTag("TurretRotate").GetComponent<CanonAim>();
             //var fireExp = GameObject.FindGameObjectWithTag("Turret").GetComponentInChildren<ShootingExperimental>(); //Experimental script
             var fire = GameObject.FindGameObjectWithTag("Turret").GetComponentInChildren<Shooting>();
 
             //fireExp.enabled = true;
             fire.enabled = true;
+            turret_aim.enabled = true;
         }
         catch (NullReferenceException nre)
         {

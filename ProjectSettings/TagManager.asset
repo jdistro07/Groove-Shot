@@ -15,6 +15,7 @@ TagManager:
   - Turret
   - AI
   - DestroyedShip
+  - TurretRotate
   layers:
   - Default
   - TransparentFX

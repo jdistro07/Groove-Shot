@@ -8,7 +8,7 @@ public class menuOverlayController : MonoBehaviour {
     //cursor
     public Texture2D combatCursor;
 
-    private Vector2 hotSpot = Vector2.zero;
+    private Vector2 hotSpot;
     private CursorMode cursorMode = CursorMode.Auto;
 
     //for pause
@@ -19,6 +19,8 @@ public class menuOverlayController : MonoBehaviour {
     void Start () {
         pausePanel.SetActive(false);
         hud.SetActive(true);
+
+        hotSpot = new Vector2(combatCursor.width/2,combatCursor.height/2);
 
         //cursor
         Cursor.SetCursor(combatCursor,hotSpot,cursorMode);
