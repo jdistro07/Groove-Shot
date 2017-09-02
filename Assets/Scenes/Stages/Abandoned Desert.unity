@@ -3579,7 +3579,6 @@ MonoBehaviour:
   - {fileID: 307649818}
   - {fileID: 946159299}
   - {fileID: 376251595}
-  index: 0
   playerShip: 
 --- !u!4 &426672108
 Transform:
@@ -8998,9 +8997,9 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 1
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -9042,7 +9041,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -9061,7 +9060,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1124305283}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &1133102412
 GameObject:
   m_ObjectHideFlags: 0
