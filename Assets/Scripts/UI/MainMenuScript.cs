@@ -47,7 +47,15 @@ public class MainMenuScript : MonoBehaviour {
         shipSelection.GetComponent<GameObject>();
 
         //Audio
-        audioSource = GetComponent<AudioSource>();
+        try
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+        catch
+        {
+            Debug.Log("[MainMenuScript.cs] Audio Source not found!");
+        }
+       
 
         //On start States
         quitMenu.SetActive(false);

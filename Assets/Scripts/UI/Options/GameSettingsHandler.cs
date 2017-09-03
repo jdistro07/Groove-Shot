@@ -5,6 +5,7 @@
     public int resolution_index;
     public int antiAlias_index;
 
+    public bool ambientOcclusion;
     public bool bloom;
     public bool motionBlur;
     public bool vsync;

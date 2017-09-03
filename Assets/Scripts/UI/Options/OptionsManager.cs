@@ -14,7 +14,7 @@ whole game not making a reusable configuration file.
 public class OptionsManager : MonoBehaviour {
 
     //Panel Controls
-    public GameObject panel_Options;
+    //public GameObject panel_Options;
 
     //Scripts
     private GameSettingsHandler gameSettings;
@@ -30,9 +30,11 @@ public class OptionsManager : MonoBehaviour {
     public Toggle toggle_bloom;
     public Toggle toggle_motionBlur;
     public Toggle toggle_vsync;
+    public Toggle toggle_ambOcclusion;
 
     //PostProcessing Stack Profile
     public PostProcessingProfile InGame;
+    public PostProcessingProfile ui;
 
     private void Awake()
     {
@@ -41,21 +43,47 @@ public class OptionsManager : MonoBehaviour {
         LoadSettings(); 
     }
 
+    //Config controls
     public void OnToggleMotionBlur(bool enabled)
     {
         gameSettings.motionBlur = enabled;
+    }
+
+    public void OnToggleBloom(bool enabled)
+    {
+        gameSettings.bloom = enabled;
+    }
+
+    public void OnToggleAmbientOcclussion(bool enabled)
+    {
+        gameSettings.ambientOcclusion = enabled;
     }
 
     public void OnClickApply()
     {
         string jsonData = JsonUtility.ToJson(gameSettings,true);
         File.WriteAllText(Application.persistentDataPath + "/config.json",jsonData);
+
+        Settings();
     }
 
     void LoadSettings()
     {
         gameSettings = JsonUtility.FromJson<GameSettingsHandler>(File.ReadAllText(Application.persistentDataPath + "/config.json"));
 
-        toggle_motionBlur.isOn = gameSettings.motionBlur;
+        Settings();
+    }
+
+    void Settings()
+    {
+        //ui
+        ui.motionBlur.enabled = toggle_motionBlur.isOn = gameSettings.motionBlur;
+        ui.bloom.enabled = toggle_bloom.isOn = gameSettings.bloom;
+        ui.ambientOcclusion.enabled = toggle_ambOcclusion.isOn = gameSettings.ambientOcclusion;
+
+        //ingame
+        InGame.motionBlur.enabled = toggle_motionBlur.isOn = gameSettings.motionBlur;
+        InGame.bloom.enabled = toggle_bloom.isOn = gameSettings.bloom;
+        InGame.ambientOcclusion.enabled = toggle_ambOcclusion.isOn = gameSettings.ambientOcclusion;
     }
 }
