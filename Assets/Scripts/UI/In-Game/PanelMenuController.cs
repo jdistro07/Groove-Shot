@@ -15,6 +15,7 @@ public class PanelMenuController : MonoBehaviour {
     public GameObject hud;
     public GameObject confirmation;
     public GameObject pausePanelMenu;
+    public GameObject options;
 
     void OnEnable()
     {
@@ -51,6 +52,18 @@ public class PanelMenuController : MonoBehaviour {
     public void OnClickCancel()
     {
         confirmation.SetActive(false);
+        pausePanelMenu.SetActive(true);
+    }
+
+    public void OnClickOptions()
+    {
+        options.SetActive(true);
+        pausePanelMenu.SetActive(false);
+    }
+
+    public void OnCloseOptions()
+    {
+        options.SetActive(false);
         pausePanelMenu.SetActive(true);
     }
 }
