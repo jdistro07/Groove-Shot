@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
 using UnityEngine.UI;
+using System.IO;
 
 /*
 This class is for managing the game settings on startup.
@@ -33,8 +34,28 @@ public class OptionsManager : MonoBehaviour {
     //PostProcessing Stack Profile
     public PostProcessingProfile InGame;
 
-    void OnEnable()
+    private void Awake()
     {
+        gameSettings = new GameSettingsHandler();
 
+        LoadSettings(); 
+    }
+
+    public void OnToggleMotionBlur(bool enabled)
+    {
+        gameSettings.motionBlur = enabled;
+    }
+
+    public void OnClickApply()
+    {
+        string jsonData = JsonUtility.ToJson(gameSettings,true);
+        File.WriteAllText(Application.persistentDataPath + "/config.json",jsonData);
+    }
+
+    void LoadSettings()
+    {
+        gameSettings = JsonUtility.FromJson<GameSettingsHandler>(File.ReadAllText(Application.persistentDataPath + "/config.json"));
+
+        toggle_motionBlur.isOn = gameSettings.motionBlur;
     }
 }

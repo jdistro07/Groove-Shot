@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class GameSettingsHandler : MonoBehaviour {
-
+﻿public class GameSettingsHandler {
     public float musicVoulme;
     public float sfxVolume;
 
