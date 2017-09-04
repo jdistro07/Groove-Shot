@@ -175,9 +175,17 @@ public class AIChase : MonoBehaviour
 
 	void FindWayPoint()
 	{
-		var hovercontrol = GetComponent<HoverControlsLance> ();
-		Quaternion rotation = Quaternion.LookRotation (waypoint.transform.position - transform.position);
-		transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime * hovercontrol.turnSpeed);
+		try
+		{
+			var hovercontrol = GetComponent<HoverControlsLance> ();
+			Quaternion rotation = Quaternion.LookRotation (waypoint.transform.position - transform.position);
+			transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime * hovercontrol.turnSpeed);
+		}
+		catch
+		{
+			
+		}
+
 	}
 
 	void lookAtPlayer()
