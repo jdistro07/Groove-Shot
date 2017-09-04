@@ -46,6 +46,7 @@ public class OptionsManager : MonoBehaviour {
     private void Awake()
     {
         gameSettings = new GameSettingsHandler();
+        LoadSettings();
     }
 
     private void Start()
@@ -55,8 +56,6 @@ public class OptionsManager : MonoBehaviour {
         {
             dropDown_resolution.options.Add(new Dropdown.OptionData(resolution.ToString()));
         }
-
-        LoadSettings();
     }
 
     public void ResolutionChange(int index)
@@ -99,7 +98,6 @@ public class OptionsManager : MonoBehaviour {
     void LoadSettings()
     {
         gameSettings = JsonUtility.FromJson<GameSettingsHandler>(File.ReadAllText(Application.persistentDataPath + "/config.json"));
-
         Settings();
     }
 
