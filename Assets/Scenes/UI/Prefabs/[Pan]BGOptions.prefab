@@ -1572,17 +1572,24 @@ MonoBehaviour:
     m_Options:
     - m_Text: OFF
       m_Image: {fileID: 0}
-    - m_Text: LOW
+    - m_Text: FXAA
       m_Image: {fileID: 0}
-    - m_Text: MEDIUM
-      m_Image: {fileID: 0}
-    - m_Text: HIGH
-      m_Image: {fileID: 0}
-    - m_Text: ULTRA
+    - m_Text: TAA
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114836773549840252}
+        m_MethodName: alias
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114040832591737090
@@ -3463,18 +3470,21 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: 1366x768
-      m_Image: {fileID: 0}
-    - m_Text: 1280x720
-      m_Image: {fileID: 0}
-    - m_Text: 1024x768
-      m_Image: {fileID: 0}
-    - m_Text: 800x600
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114836773549840252}
+        m_MethodName: ResolutionChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114719093330838810
@@ -3939,14 +3949,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider_music: {fileID: 0}
   slider_sfx: {fileID: 0}
-  dropDown_resolution: {fileID: 0}
-  dropDown_antiAlias: {fileID: 0}
+  dropDown_resolution: {fileID: 114713235465899268}
+  dropDown_antiAlias: {fileID: 114031040119922966}
   toggle_bloom: {fileID: 114824276527737592}
   toggle_motionBlur: {fileID: 114984044669626844}
   toggle_vsync: {fileID: 114661447438299524}
   toggle_ambOcclusion: {fileID: 114668079747700686}
   InGame: {fileID: 11400000, guid: 3886e3c88ec579f458f636ef6c5eae40, type: 2}
   ui: {fileID: 11400000, guid: 82f76c99895ad4a4fa698487c4963943, type: 2}
+  indexAA: 0
+  indexRes: 0
 --- !u!114 &114840549495155562
 MonoBehaviour:
   m_ObjectHideFlags: 1
