@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 222521281506439784}
   - component: {fileID: 114918834426462168}
   - component: {fileID: 82258487709079188}
-  - component: {fileID: 114836773549840252}
+  - component: {fileID: 114924028729996084}
   m_Layer: 5
   m_Name: '[Pan]BGOptions'
   m_TagString: Untagged
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114836773549840252}
+      - m_Target: {fileID: 0}
         m_MethodName: alias
         m_Mode: 0
         m_Arguments:
@@ -1847,8 +1847,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114836773549840252}
-        m_MethodName: OnClickApply
+      - m_Target: {fileID: 114924028729996084}
+        m_MethodName: OnClick_Apply
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3322,8 +3322,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114836773549840252}
-        m_MethodName: OnToggleAmbientOcclussion
+      - m_Target: {fileID: 114924028729996084}
+        m_MethodName: OnToggle_AmbientOclussion
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3473,18 +3473,7 @@ MonoBehaviour:
     m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114836773549840252}
-        m_MethodName: ResolutionChange
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114719093330838810
@@ -3823,8 +3812,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114836773549840252}
-        m_MethodName: OnToggleBloom
+      - m_Target: {fileID: 114924028729996084}
+        m_MethodName: OnToggle_Bloom
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3936,29 +3925,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114836773549840252
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1414955827984978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f4b42931c8f010468c5bbf6cf330f6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider_music: {fileID: 0}
-  slider_sfx: {fileID: 0}
-  dropDown_resolution: {fileID: 114713235465899268}
-  dropDown_antiAlias: {fileID: 114031040119922966}
-  toggle_bloom: {fileID: 114824276527737592}
-  toggle_motionBlur: {fileID: 114984044669626844}
-  toggle_vsync: {fileID: 114661447438299524}
-  toggle_ambOcclusion: {fileID: 114668079747700686}
-  InGame: {fileID: 11400000, guid: 3886e3c88ec579f458f636ef6c5eae40, type: 2}
-  ui: {fileID: 11400000, guid: 82f76c99895ad4a4fa698487c4963943, type: 2}
-  indexAA: 0
-  indexRes: 0
 --- !u!114 &114840549495155562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4127,6 +4093,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114924028729996084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414955827984978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca6d7fd317e5784094254bf12d6e97f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambient_toggle: {fileID: 114668079747700686}
+  motionBlur_toggle: {fileID: 114984044669626844}
+  bloom_toggle: {fileID: 114824276527737592}
+  post_inGame: {fileID: 11400000, guid: 3886e3c88ec579f458f636ef6c5eae40, type: 2}
+  post_ui: {fileID: 11400000, guid: 82f76c99895ad4a4fa698487c4963943, type: 2}
 --- !u!114 &114931326128429116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4295,8 +4277,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114836773549840252}
-        m_MethodName: OnToggleMotionBlur
+      - m_Target: {fileID: 114924028729996084}
+        m_MethodName: OnToggle_MotionBlur
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5292,9 +5274,9 @@ RectTransform:
   m_Children:
   - {fileID: 224720637345903286}
   - {fileID: 224529851463710238}
-  - {fileID: 224810758854117580}
   - {fileID: 224277776096903582}
   - {fileID: 224833603035370296}
+  - {fileID: 224810758854117580}
   - {fileID: 224114936288790924}
   - {fileID: 224426942825960768}
   - {fileID: 224156110186180210}
@@ -5320,7 +5302,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224256990616062402}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.7903073}
   m_AnchorMax: {x: 0.8052261, y: 0.85157686}
@@ -6034,7 +6016,7 @@ RectTransform:
   - {fileID: 224448594738560224}
   - {fileID: 224720269974308686}
   m_Father: {fileID: 224256990616062402}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.70015365}
   m_AnchorMax: {x: 0.5, y: 0.7903073}
@@ -6071,7 +6053,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224256990616062402}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.640116}
   m_AnchorMax: {x: 0.29361302, y: 0.70015365}
