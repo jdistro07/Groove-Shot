@@ -46,7 +46,10 @@ public class OptionsManager : MonoBehaviour {
     private void Awake()
     {
         gameSettings = new GameSettingsHandler();
-        LoadSettings();
+        if (!File.Exists(Application.persistentDataPath + "/config.json"))
+        {
+            File.Create(Application.persistentDataPath + "/config.json");
+        }
     }
 
     private void Start()
@@ -56,6 +59,8 @@ public class OptionsManager : MonoBehaviour {
         {
             dropDown_resolution.options.Add(new Dropdown.OptionData(resolution.ToString()));
         }
+
+        LoadSettings();
     }
 
     public void ResolutionChange(int index)
@@ -90,7 +95,16 @@ public class OptionsManager : MonoBehaviour {
     public void OnClickApply()
     {
         string jsonData = JsonUtility.ToJson(gameSettings,true);
-        File.WriteAllText(Application.persistentDataPath + "/config.json",jsonData);
+
+        if (!File.Exists(Application.persistentDataPath + "/config.json"))
+        {
+            File.Create(Application.persistentDataPath + "/config.json");
+            File.WriteAllText(Application.persistentDataPath + "/config.json", jsonData);
+        }
+        else
+        {
+            File.WriteAllText(Application.persistentDataPath + "/config.json", jsonData);
+        }
 
         Settings();
     }

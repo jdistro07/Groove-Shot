@@ -1585,6 +1585,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1436343921}
     m_Modifications:
+    - target: {fileID: 114713235465899268, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224838808332274330, guid: 077b0709e6d26b84097266c0d332fb91,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1690,7 +1695,44 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1436343922}
-    m_RemovedComponents: []
+    - target: {fileID: 114713235465899268, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114836773549840252, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+    - target: {fileID: 114713235465899268, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResolutionChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 114713235465899268, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114713235465899268, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224833603035370296, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224277776096903582, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224810758854117580, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114836773549840252, guid: 077b0709e6d26b84097266c0d332fb91, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 077b0709e6d26b84097266c0d332fb91, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &664243803 stripped
