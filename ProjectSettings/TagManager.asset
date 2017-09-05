@@ -14,8 +14,9 @@ TagManager:
   - Game Manager
   - Turret
   - AI
-  - DestroyedShip
   - TurretRotate
+  - DestroyedPlayer
+  - DestroyedAI
   layers:
   - Default
   - TransparentFX

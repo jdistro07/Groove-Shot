@@ -3968,6 +3968,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1593430724396622, guid: 3c8aba710abc4e54697af641b0bdefa9, type: 2}
+      propertyPath: m_TagString
+      value: DestroyedShip
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c8aba710abc4e54697af641b0bdefa9, type: 2}
   m_IsPrefabParent: 0
@@ -3993,7 +3997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1278784577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5103,7 +5107,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4866701739197448, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.47
       objectReference: {fileID: 0}
     - target: {fileID: 4866701739197448, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5111,7 +5115,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4866701739197448, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 4866701739197448, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5132,10 +5136,6 @@ Prefab:
     - target: {fileID: 4866701739197448, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040877702875072, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}

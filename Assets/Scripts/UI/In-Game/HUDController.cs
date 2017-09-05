@@ -20,15 +20,16 @@ public class HUDController : MonoBehaviour {
 
     void HUDTracker()
     {
+        bool debugged = false;
         try
         {
+            debugged = true;
             var hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
             dispHP.text = hp.health.ToString();
         }
-        catch(NullReferenceException nre)
+        catch
         {
             dispHP.text = "0";
-            Debug.Log("[HUDController] Finding Player: "+nre);
         }
     }
 }

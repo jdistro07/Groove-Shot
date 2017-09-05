@@ -22,10 +22,11 @@ public class CameraMotion : MonoBehaviour {
 
     void Update()
     {
-       tracker();
+        tracker();
     }
 
     void LateUpdate() {
+
         try
         {
             Vector3 desiredPosition = new Vector3();
@@ -44,11 +45,11 @@ public class CameraMotion : MonoBehaviour {
         }
         catch (NullReferenceException nre)
         {
-            Debug.Log("Finding Player: "+nre);
+            
         }
         catch(MissingReferenceException mre)
         {
-            Debug.Log("[CameraMotion.cs] Error: "+mre);
+            Debug.Log("[CameraMotion.cs] Error: " + mre);
         }
     }
 
@@ -60,8 +61,7 @@ public class CameraMotion : MonoBehaviour {
         }
         catch
         {
-            Debug.Log("Searching Player...");
+            playerObject = GameObject.FindGameObjectWithTag("DestroyedPlayer");
         }
-        
     }
 }

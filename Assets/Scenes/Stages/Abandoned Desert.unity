@@ -8871,7 +8871,6 @@ GameObject:
   - component: {fileID: 1124305288}
   - component: {fileID: 1124305289}
   - component: {fileID: 1124305290}
-  - component: {fileID: 1124305291}
   m_Layer: 5
   m_Name: CanvPauseMenu
   m_TagString: Untagged
@@ -9067,13 +9066,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!81 &1124305291
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1124305283}
-  m_Enabled: 0
 --- !u!1 &1133102412
 GameObject:
   m_ObjectHideFlags: 0
