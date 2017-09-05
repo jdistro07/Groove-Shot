@@ -14,14 +14,36 @@ public class SettingsManager : MonoBehaviour {
     public Toggle bloom_toggle;
 
     public Dropdown dropdown_shadowQuality;
+    public Dropdown dropdown_Resolution;
 
     public PostProcessingProfile post_inGame;
     public PostProcessingProfile post_ui;
 
+
+    //vars
+    public int index_resolution;
+
+    //properties
+    Resolution[] resolutions;
+
     private void Awake()
     {
         gamesettings = new GameSettingsHandler();
+
+        resolutions = Screen.resolutions;
+        foreach (Resolution resolution in resolutions)
+        {
+            dropdown_Resolution.options.Add(new Dropdown.OptionData(resolution.ToString()));
+        }
+
+        //Load the settings
         Load_Settings();
+    }
+
+    public void OnToggle_Resolution(int index)
+    {
+        index_resolution = index;
+        gamesettings.resolution_index = index_resolution;
     }
 
     public void OnToggle_ShadowQuality(int quality)
@@ -62,6 +84,9 @@ public class SettingsManager : MonoBehaviour {
     {
         var shadowlevel = gamesettings.shadow_quality;
         dropdown_shadowQuality.value = shadowlevel;
+
+        dropdown_Resolution.value =  index_resolution = gamesettings.resolution_index;
+        Screen.SetResolution(resolutions[index_resolution].width,resolutions[index_resolution].height,true,60);
 
         //Global
         ShadowLevel(shadowlevel);

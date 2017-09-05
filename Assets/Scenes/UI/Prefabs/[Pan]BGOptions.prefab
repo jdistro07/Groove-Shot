@@ -3484,7 +3484,18 @@ MonoBehaviour:
     m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114924028729996084}
+        m_MethodName: OnToggle_Resolution
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114719093330838810
@@ -4119,8 +4130,10 @@ MonoBehaviour:
   motionBlur_toggle: {fileID: 114984044669626844}
   bloom_toggle: {fileID: 114824276527737592}
   dropdown_shadowQuality: {fileID: 114146077833929178}
+  dropdown_Resolution: {fileID: 114713235465899268}
   post_inGame: {fileID: 11400000, guid: 3886e3c88ec579f458f636ef6c5eae40, type: 2}
   post_ui: {fileID: 11400000, guid: 82f76c99895ad4a4fa698487c4963943, type: 2}
+  index_resolution: 0
 --- !u!114 &114931326128429116
 MonoBehaviour:
   m_ObjectHideFlags: 1
