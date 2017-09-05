@@ -1731,6 +1731,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114077381771271072, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1409390489}
+    - target: {fileID: 114077381771271072, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick_Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 114668079747700686, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1409390489}
+    - target: {fileID: 114668079747700686, guid: 077b0709e6d26b84097266c0d332fb91,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnToggle_AmbientOclussion
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114836773549840252, guid: 077b0709e6d26b84097266c0d332fb91, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 077b0709e6d26b84097266c0d332fb91, type: 2}
@@ -3453,6 +3473,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4279442575840054, guid: 2f01900586265460b859e219a93163ff,
     type: 2}
   m_PrefabInternal: {fileID: 1329491170}
+--- !u!114 &1198952471 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114668079747700686, guid: 077b0709e6d26b84097266c0d332fb91,
+    type: 2}
+  m_PrefabInternal: {fileID: 648311089}
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1208996858
 Prefab:
   m_ObjectHideFlags: 0
@@ -4084,6 +4110,18 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224838808332274330, guid: 077b0709e6d26b84097266c0d332fb91,
     type: 2}
   m_PrefabInternal: {fileID: 648311089}
+--- !u!114 &1409390489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409390487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca6d7fd317e5784094254bf12d6e97f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambient_toggle: {fileID: 1198952471}
 --- !u!1 &1436343917
 GameObject:
   m_ObjectHideFlags: 0
