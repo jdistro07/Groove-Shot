@@ -4,7 +4,7 @@
 
     public int resolution_index;
     public int antiAlias_index;
-
+    public int shadow_quality;
     public bool aaEnabled;
     public bool ambientOcclusion;
     public bool bloom;

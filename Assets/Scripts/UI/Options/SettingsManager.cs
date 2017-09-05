@@ -13,6 +13,8 @@ public class SettingsManager : MonoBehaviour {
     public Toggle motionBlur_toggle;
     public Toggle bloom_toggle;
 
+    public Dropdown dropdown_shadowQuality;
+
     public PostProcessingProfile post_inGame;
     public PostProcessingProfile post_ui;
 
@@ -20,6 +22,11 @@ public class SettingsManager : MonoBehaviour {
     {
         gamesettings = new GameSettingsHandler();
         Load_Settings();
+    }
+
+    public void OnToggle_ShadowQuality(int quality)
+    {
+        gamesettings.shadow_quality = quality;
     }
 
     public void OnToggle_AmbientOclussion(bool enabled)
@@ -53,6 +60,12 @@ public class SettingsManager : MonoBehaviour {
 
     void SettingsPreset()
     {
+        var shadowlevel = gamesettings.shadow_quality;
+        dropdown_shadowQuality.value = shadowlevel;
+
+        //Global
+        ShadowLevel(shadowlevel);
+
         //In Game
         post_inGame.ambientOcclusion.enabled = ambient_toggle.isOn = gamesettings.ambientOcclusion;
         post_inGame.motionBlur.enabled = motionBlur_toggle.isOn = gamesettings.motionBlur;
@@ -62,6 +75,19 @@ public class SettingsManager : MonoBehaviour {
         post_ui.ambientOcclusion.enabled = ambient_toggle.isOn = gamesettings.ambientOcclusion;
         post_ui.motionBlur.enabled = motionBlur_toggle.isOn = gamesettings.motionBlur;
         post_ui.bloom.enabled = bloom_toggle.isOn = gamesettings.bloom;
+    }
+
+    void ShadowLevel(int quality)
+    {
+        switch (quality)
+        {
+            case 0:
+                QualitySettings.shadowResolution = ShadowResolution.Low;
+                break;
+            case 1:
+                QualitySettings.shadowResolution = ShadowResolution.Medium;
+                break;
+        }
     }
 
 }
