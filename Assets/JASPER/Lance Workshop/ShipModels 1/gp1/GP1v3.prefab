@@ -966,7 +966,9 @@ MonoBehaviour:
   projectile: {fileID: 54981700931738778, guid: b1d53799e73c8c84592b3f6ff2c69ce0,
     type: 2}
   projectileOrigin: {fileID: 4395102950778060}
+  OneShot: 0
   cannonSound: {fileID: 8300000, guid: 47a45c263de21f04a8b677a0bf81f34a, type: 3}
+  audio_source: {fileID: 0}
   particleEffects: {fileID: 198881717328081910}
   fireDelay: 0.3
   maxAmmo: 7
@@ -996,6 +998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 450
   armor: 10
+  destroyed: {fileID: 1593430724396622, guid: c612a6bd798cb6442bef29cf55816f14, type: 2}
   crashThreshold: 0
 --- !u!114 &114642131043754214
 MonoBehaviour:
@@ -1021,7 +1024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverForce: 18000
-  counterHover: 1500
+  counterHover: 18000
   hoverHeight: 4
   forwardSpeed: 55000
   backwardSpeed: 8000
