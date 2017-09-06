@@ -8,12 +8,14 @@ public class AIChase : MonoBehaviour
 	private Rigidbody ship;
 	private GameObject waypoint;
 	private int wayindex;
+	private int lastindex;
 
 	public float chaseStart;
 	public float maxFollowOffset;
 	public float collisionAvoidance;
 
-	int layerMask;
+	int obstacle;
+	int target;
 	GameObject[] waypoints;
 
 	public GameObject FindClosestEnemy()
@@ -38,8 +40,10 @@ public class AIChase : MonoBehaviour
 
 	void Start()
 	{
-		layerMask = (1 << LayerMask.NameToLayer ("Ship") | 1 << LayerMask.NameToLayer ("Waypoints"));
-		layerMask = ~layerMask;
+		obstacle = (1 << LayerMask.NameToLayer ("Ship") | 1 << LayerMask.NameToLayer ("Waypoints"));
+		obstacle = ~obstacle;
+
+		target = (1 << LayerMask.NameToLayer ("Ship") | 1 << LayerMask.NameToLayer ("Waypoints"));
 	}
 
 	void Awake()
@@ -50,6 +54,12 @@ public class AIChase : MonoBehaviour
 	void Update()
 	{
 		waypoints = GameObject.FindGameObjectsWithTag ("Waypoint");
+
+		if (wayindex == lastindex)
+		{
+			wayindex = Random.Range (0, waypoints.Length);
+		}
+
 		waypoint = waypoints[wayindex];
 	}
 
@@ -78,12 +88,9 @@ public class AIChase : MonoBehaviour
 	{
 		if (gameObject.tag == "AI")
 		{
-			wayindex++;
-
-			if (wayindex >= waypoints.Length)
-			{
-				wayindex = 0;
-			}
+			lastindex = wayindex;
+			wayindex = Random.Range (0, waypoints.Length);
+			waypoint = waypoints [wayindex];
 		}
 	}
 
@@ -95,26 +102,26 @@ public class AIChase : MonoBehaviour
 			RaycastHit hit;
 
 			Ray left = new Ray (gameObject.transform.position, transform.forward + -(transform.right));
-			if (Physics.Raycast (left, out hit, collisionAvoidance, layerMask))
+			if (Physics.Raycast (left, out hit, collisionAvoidance, obstacle))
 			{
 				Debug.DrawLine (left.origin, hit.point);
 				turnright ();
 			}
 
 			Ray right = new Ray (gameObject.transform.position, transform.forward + transform.right);
-			if (Physics.Raycast (right, out hit, collisionAvoidance, layerMask))
+			if (Physics.Raycast (right, out hit, collisionAvoidance, obstacle))
 			{
 				Debug.DrawLine (right.origin, hit.point);
 				turnleft ();
 			}
 
 			Ray front = new Ray (gameObject.transform.position, transform.forward);
-			if (Physics.Raycast (front, out hit, collisionAvoidance, layerMask))
+			if (Physics.Raycast (front, out hit, collisionAvoidance, obstacle))
 			{
 				var hovercontrol = GetComponent<HoverControlsLance> ();
 				Debug.DrawLine (front.origin, hit.point);
 
-				if (Physics.Raycast (front, out hit, (collisionAvoidance / 2), layerMask))
+				if (Physics.Raycast (front, out hit, (collisionAvoidance / 2), obstacle))
 				{
 					reverse ();
 				}
@@ -139,27 +146,27 @@ public class AIChase : MonoBehaviour
 	{
 		RaycastHit hit;
 
-		Ray left = new Ray (gameObject.transform.position, transform.forward + -(transform.right));
-		if (Physics.Raycast (left, out hit, collisionAvoidance, layerMask))
+		Ray northwest = new Ray (gameObject.transform.position, transform.forward + -(transform.right));
+		if (Physics.Raycast (northwest, out hit, collisionAvoidance, obstacle))
 		{
-			Debug.DrawLine (left.origin, hit.point);
+			Debug.DrawLine (northwest.origin, hit.point);
 			turnright ();
 		}
 
-		Ray right = new Ray (gameObject.transform.position, transform.forward + transform.right);
-		if (Physics.Raycast (right, out hit, collisionAvoidance, layerMask))
+		Ray northeast = new Ray (gameObject.transform.position, transform.forward + transform.right);
+		if (Physics.Raycast (northeast, out hit, collisionAvoidance, obstacle))
 		{
-			Debug.DrawLine (right.origin, hit.point);
+			Debug.DrawLine (northeast.origin, hit.point);
 			turnleft ();
 		}
 
-		Ray front = new Ray (gameObject.transform.position, transform.forward);
-		if (Physics.Raycast (front, out hit, collisionAvoidance, layerMask))
+		Ray north = new Ray (gameObject.transform.position, transform.forward);
+		if (Physics.Raycast (north, out hit, collisionAvoidance, obstacle))
 		{
 			var hovercontrol = GetComponent<HoverControlsLance> ();
-			Debug.DrawLine (front.origin, hit.point);
+			Debug.DrawLine (north.origin, hit.point);
 
-			if (Physics.Raycast (front, out hit, (collisionAvoidance / 2), layerMask))
+			if (Physics.Raycast (north, out hit, (collisionAvoidance / 2), obstacle))
 			{
 				reverse ();
 			}

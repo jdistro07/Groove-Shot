@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
 	//others
+	public bool player = true;
 	public bool singleBarrel = true;
 	private bool firing = false;
 
@@ -35,15 +36,18 @@ public class Shoot : MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetMouseButton(0))
+		if (player == true)
 		{
-			if (singleBarrel == true)
+			if (Input.GetMouseButton(0))
 			{
-				SingleBarrel ();
-			}
-			else
-			{
-				TwinBarrel ();
+				if (singleBarrel == true)
+				{
+					SingleBarrel ();
+				}
+				else
+				{
+					TwinBarrel ();
+				}
 			}
 		}
 	}

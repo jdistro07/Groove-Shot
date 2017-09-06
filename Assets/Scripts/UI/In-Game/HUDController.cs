@@ -13,6 +13,11 @@ public class HUDController : MonoBehaviour {
         HUDTracker();
     }
 
+	void Awake()
+	{
+		score = 0;
+	}
+
     // Update is called once per frame
     void Update () {
         HUDTracker();
@@ -26,10 +31,20 @@ public class HUDController : MonoBehaviour {
             debugged = true;
             var hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
             dispHP.text = hp.health.ToString();
+
+			dispScore.text = score.ToString();
         }
         catch
         {
             dispHP.text = "0";
+			dispScore.text = "0";
+            Debug.Log("[HUDController] Finding Player: "+nre);
         }
     }
+
+	//Lines of Codes beyond this point is contributed by Lance
+	public static int score;
+
+	public Text dispScore;
+
 }

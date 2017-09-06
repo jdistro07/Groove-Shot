@@ -12434,6 +12434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dispHP: {fileID: 158816593}
+  dispScore: {fileID: 2075944294}
 --- !u!223 &1490717673
 Canvas:
   m_ObjectHideFlags: 0
