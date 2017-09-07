@@ -5,23 +5,24 @@ using System;
 
 
 public class AISpawner : MonoBehaviour {
+    public string[] ai;
 
-    public GameObject[] spawnPoints;
+    int index;
 
-    public void RespawnAI(string aiID)
+    private void Awake()
     {
-        int index;
-        var res = Resources.Load("ai/" + aiID);
-        index = UnityEngine.Random.Range(0, spawnPoints.Length);
+        ai[0] = ("HGLS (AI)");
 
-        try
+        for (int x = 0; !(x == 5); x++)
         {
-            Debug.Log(index);
-            Instantiate(res, spawnPoints[index].transform.position, spawnPoints[index].transform.rotation);
+            if (x == ai.Length)
+            {
+                index = UnityEngine.Random.Range(0, ai.Length);
+                Debug.Log(ai.ToString());
+            }
         }
-        catch (ArgumentException ae)
-        {
-            Debug.Log("[Spawner] Cannot Spawn Ship: " + ae);
-        }
+
+        var res = Resources.Load<GameObject>("ai/");
+        
     }
 }
