@@ -11,10 +11,10 @@ public class AISpawner : MonoBehaviour {
     private void Awake()
     {
         var id = GameObject.FindGameObjectWithTag("AI").GetComponent<ShipInfo>();
-        Respawn(id.id);
+        RespawnAI(id.id);
     }
 
-    void Respawn(string aiID)
+    public void RespawnAI(string aiID)
     {
         int index;
         var res = Resources.Load("ai/" + aiID);

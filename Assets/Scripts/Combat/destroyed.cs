@@ -9,6 +9,8 @@ public class destroyed : MonoBehaviour {
 
     public float respawn_time = 10f;
 
+    public bool isAI;
+
     void Awake()
     {
         soundIndex = Random.Range(0,audio_destroyed.Length);
@@ -19,6 +21,9 @@ public class destroyed : MonoBehaviour {
     {
         respawn_time -= Time.deltaTime;
         var spawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Spawner>();
+        var AIspawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<AISpawner>();
+        var id = GameObject.FindGameObjectWithTag("AI").GetComponent<ShipInfo>();
+        string shipAI = id.id;
 
         bool called = false;
 
@@ -26,10 +31,20 @@ public class destroyed : MonoBehaviour {
         {
             if (respawn_time <= 0)
             {
-                spawn.Spawn_Player();
-                Destroy(gameObject);
+                if (!isAI)
+                {
+                    spawn.Spawn_Player();
+                    Destroy(gameObject);
 
-                called = true;
+                    called = true;
+                }else if (isAI)
+                {
+                    AIspawn.RespawnAI(shipAI);
+                    Destroy(gameObject);
+
+                    called = true;
+                }
+                
             }
         }
         
