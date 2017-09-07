@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 114238441647963742}
   - component: {fileID: 81336044171665376}
   - component: {fileID: 82591458313838094}
+  - component: {fileID: 114800366583045720}
   m_Layer: 8
   m_Name: HGLS (AI) Death
   m_TagString: AIDestroyed
@@ -1347,6 +1348,18 @@ MonoBehaviour:
   soundIndex: 0
   respawn_time: 10
   isAI: 1
+--- !u!114 &114800366583045720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1028008256626958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55caae1be81ab584b93ee92bf3c8035e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: HGLS (AI)
 --- !u!114 &114956312272148298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1358,7 +1371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55caae1be81ab584b93ee92bf3c8035e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: HGLS
+  id: HGLS (AI)
 --- !u!198 &198036025455076422
 ParticleSystem:
   m_ObjectHideFlags: 1

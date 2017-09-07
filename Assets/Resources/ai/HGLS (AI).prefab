@@ -42,10 +42,9 @@ GameObject:
   - component: {fileID: 95795990745726160}
   - component: {fileID: 54740972191476486}
   - component: {fileID: 65075675000167118}
-  - component: {fileID: 114790145481877890}
   - component: {fileID: 114292060711990712}
   - component: {fileID: 114153944580317934}
-  - component: {fileID: 114991249319785518}
+  - component: {fileID: 114368807926100064}
   m_Layer: 8
   m_Name: HGLS (AI)
   m_TagString: AI
@@ -889,7 +888,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1124394641395192}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 121fd1deae3b8054e8ea494ff8ba26e9, type: 3}
   m_Name: 
@@ -897,6 +896,21 @@ MonoBehaviour:
   chaseStart: 100
   maxFollowOffset: 25
   collisionAvoidance: 15
+--- !u!114 &114368807926100064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1124394641395192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80549c4d6df1ff4c82491ce4c568dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 950
+  armor: 30
+  destroyed: {fileID: 1028008256626958, guid: 3d735d72efbfa0c4e838104fdf240f56, type: 2}
+  crashThreshold: 20
 --- !u!114 &114553822520754562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -920,21 +934,6 @@ MonoBehaviour:
   maxAmmo: 10
   currentAmmo: 0
   reloadTime: 3.5
---- !u!114 &114790145481877890
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1124394641395192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c80549c4d6df1ff4c82491ce4c568dc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 950
-  armor: 30
-  destroyed: {fileID: 1028008256626958, guid: 3d735d72efbfa0c4e838104fdf240f56, type: 2}
-  crashThreshold: 50
 --- !u!114 &114933948398418412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -949,18 +948,6 @@ MonoBehaviour:
   targetRange: 120
   aimDistance: 75
   rotationSpeed: 2
---- !u!114 &114991249319785518
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1124394641395192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55caae1be81ab584b93ee92bf3c8035e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: HGLS
 --- !u!198 &198894790912085170
 ParticleSystem:
   m_ObjectHideFlags: 1

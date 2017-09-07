@@ -22,8 +22,6 @@ public class destroyed : MonoBehaviour {
         respawn_time -= Time.deltaTime;
         var spawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Spawner>();
         var AIspawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<AISpawner>();
-        var id = GameObject.FindGameObjectWithTag("AI").GetComponent<ShipInfo>();
-        string shipAI = id.id;
 
         bool called = false;
 
@@ -39,7 +37,7 @@ public class destroyed : MonoBehaviour {
                     called = true;
                 }else if (isAI)
                 {
-                    AIspawn.RespawnAI(shipAI);
+                    AIspawn.RespawnAI("HGLS (AI)");
                     Destroy(gameObject);
 
                     called = true;
