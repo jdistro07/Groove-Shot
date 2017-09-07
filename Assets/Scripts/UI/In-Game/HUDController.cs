@@ -34,7 +34,7 @@ public class HUDController : MonoBehaviour {
 
 			dispScore.text = score.ToString();
         }
-        catch
+        catch(NullReferenceException nre)
         {
             dispHP.text = "0";
 			dispScore.text = "0";
