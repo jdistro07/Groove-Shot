@@ -54,14 +54,12 @@ GameObject:
   - component: {fileID: 95097661627890756}
   - component: {fileID: 54840673288295068}
   - component: {fileID: 65749470660527862}
-  - component: {fileID: 114956312272148298}
   - component: {fileID: 114238441647963742}
   - component: {fileID: 81336044171665376}
   - component: {fileID: 82591458313838094}
-  - component: {fileID: 114800366583045720}
   m_Layer: 8
   m_Name: HGLS (AI) Death
-  m_TagString: AIDestroyed
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1348,30 +1346,10 @@ MonoBehaviour:
   soundIndex: 0
   respawn_time: 10
   isAI: 1
---- !u!114 &114800366583045720
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1028008256626958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55caae1be81ab584b93ee92bf3c8035e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: HGLS (AI)
---- !u!114 &114956312272148298
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1028008256626958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55caae1be81ab584b93ee92bf3c8035e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: HGLS (AI)
+  aiID: HGLS (AI)
+  aiSpawner: {fileID: 0}
+  spawn: {fileID: 0}
+  desRef: {fileID: 0}
 --- !u!198 &198036025455076422
 ParticleSystem:
   m_ObjectHideFlags: 1

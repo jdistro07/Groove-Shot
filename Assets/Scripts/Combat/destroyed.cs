@@ -9,19 +9,28 @@ public class destroyed : MonoBehaviour {
 
     public float respawn_time = 10f;
 
+    //ai properties
     public bool isAI;
+    public string aiID;
+
+    public AISpawner aiSpawner;
+    public Spawner spawn;
+    public destroyed desRef;
 
     void Awake()
     {
         soundIndex = Random.Range(0,audio_destroyed.Length);
         audio_souce.PlayOneShot(audio_destroyed[soundIndex]);
+
+        spawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Spawner>();
+        aiSpawner = GameObject.FindGameObjectWithTag("Respawn").GetComponent<AISpawner>();
+
+        aiSpawner = new AISpawner();
     }
 
     private void Update()
     {
         respawn_time -= Time.deltaTime;
-        var spawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Spawner>();
-        var AIspawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<AISpawner>();
 
         bool called = false;
 
@@ -37,7 +46,7 @@ public class destroyed : MonoBehaviour {
                     called = true;
                 }else if (isAI)
                 {
-                    AIspawn.RespawnAI("HGLS (AI)");
+                    aiSpawner.RespawnAI(desRef.aiID);
                     Destroy(gameObject);
 
                     called = true;

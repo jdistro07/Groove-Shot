@@ -8,12 +8,6 @@ public class AISpawner : MonoBehaviour {
 
     public GameObject[] spawnPoints;
 
-    private void Awake()
-    {
-        var id = GameObject.FindGameObjectWithTag("AI").GetComponent<ShipInfo>();
-        RespawnAI(id.id);
-    }
-
     public void RespawnAI(string aiID)
     {
         int index;
