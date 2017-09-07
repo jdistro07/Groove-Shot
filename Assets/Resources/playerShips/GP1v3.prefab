@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 82788611383542892}
   - component: {fileID: 114205445389599820}
   - component: {fileID: 114320447999428126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GP1v3
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1593430724396622}
   m_LocalRotation: {x: -0, y: 0.19469015, z: -0, w: 0.9808648}
-  m_LocalPosition: {x: 0, y: 2.39, z: 0}
+  m_LocalPosition: {x: -4.15, y: 2.39, z: 1.72}
   m_LocalScale: {x: 1.2769997, y: 1.5761634, z: 0.5848653}
   m_Children:
   - {fileID: 4569670998653024}
@@ -893,18 +893,18 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_audioClip: {fileID: 8300000, guid: 47a45c263de21f04a8b677a0bf81f34a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 0
+  Priority: 128
   DopplerLevel: 1
-  MinDistance: 12.307399
-  MaxDistance: 75.37145
+  MinDistance: 50
+  MaxDistance: 200
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
