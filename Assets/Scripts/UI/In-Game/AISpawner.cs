@@ -28,6 +28,9 @@ public class AISpawner : MonoBehaviour {
 
             string name = ai[indexAI].name;
             Debug.Log(name);
+
+            //I am currently using this kind of format since this is what I know for now.
+            //Instantiate(name,spawn[indexSpawn].transform.position,spawn[indexSpawn].transform.rotation);
         }
     }
 }
