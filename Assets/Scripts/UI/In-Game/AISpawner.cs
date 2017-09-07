@@ -5,24 +5,29 @@ using System;
 
 
 public class AISpawner : MonoBehaviour {
-    public string[] ai;
+    public List<GameObject> ai;
+    public GameObject[] spawn;
 
-    int index;
+    int indexAI;
+    int indexSpawn;
 
-    private void Awake()
+    private void Start()
     {
-        ai[0] = ("HGLS (AI)");
+        var res = Resources.LoadAll<GameObject>("ai/");
 
-        for (int x = 0; !(x == 5); x++)
+        foreach (GameObject obj in res)
         {
-            if (x == ai.Length)
-            {
-                index = UnityEngine.Random.Range(0, ai.Length);
-                Debug.Log(ai.ToString());
-            }
+            ai.Add(obj);
         }
 
-        var res = Resources.Load<GameObject>("ai/");
-        
+
+        for (int x=0; x<5; x++)
+        {
+            indexAI = UnityEngine.Random.Range(0,ai.Count);
+            indexSpawn = UnityEngine.Random.Range(0, spawn.Length);
+
+            string name = ai[indexAI].name;
+            Debug.Log(name);
+        }
     }
 }
