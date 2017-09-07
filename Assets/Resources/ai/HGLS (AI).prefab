@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 114790145481877890}
   - component: {fileID: 114292060711990712}
   - component: {fileID: 114153944580317934}
+  - component: {fileID: 114991249319785518}
   m_Layer: 8
   m_Name: HGLS (AI)
   m_TagString: AI
@@ -948,6 +949,18 @@ MonoBehaviour:
   targetRange: 120
   aimDistance: 75
   rotationSpeed: 2
+--- !u!114 &114991249319785518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1124394641395192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55caae1be81ab584b93ee92bf3c8035e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: HGLS
 --- !u!198 &198894790912085170
 ParticleSystem:
   m_ObjectHideFlags: 1
