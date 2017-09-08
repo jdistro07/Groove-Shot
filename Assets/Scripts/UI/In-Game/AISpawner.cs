@@ -21,16 +21,19 @@ public class AISpawner : MonoBehaviour {
         }
 
 
-        for (int x=0; x<5; x++)
+        for (int x=0; x<spawn.Length; x++)
         {
             indexAI = UnityEngine.Random.Range(0,ai.Count);
             indexSpawn = UnityEngine.Random.Range(0, spawn.Length);
 
-            string name = ai[indexAI].name;
-            Debug.Log(name);
-
-            //I am currently using this kind of format since this is what I know for now.
-            //Instantiate(name,spawn[indexSpawn].transform.position,spawn[indexSpawn].transform.rotation);
+            if (x == 5)
+            {
+                break;
+            }
+            else
+            {
+                Instantiate(ai[indexAI], spawn[indexSpawn].transform.position, spawn[indexSpawn].transform.rotation);
+            }
         }
     }
 }
