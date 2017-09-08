@@ -86,12 +86,20 @@ public class AIChase : MonoBehaviour
 
 	void OnTriggerEnter()
 	{
-		if (gameObject.tag == "AI")
-		{
-			lastindex = wayindex;
-			wayindex = Random.Range (0, waypoints.Length);
-			waypoint = waypoints [wayindex];
-		}
+        try
+        {
+            if (gameObject.tag == "AI")
+            {
+                lastindex = wayindex;
+                wayindex = Random.Range(0, waypoints.Length);
+                waypoint = waypoints[wayindex];
+            }
+        }
+        catch
+        {
+
+        }
+		
 	}
 
 	void intercept()
