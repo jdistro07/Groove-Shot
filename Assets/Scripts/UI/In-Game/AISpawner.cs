@@ -36,4 +36,11 @@ public class AISpawner : MonoBehaviour {
             }
         }
     }
+
+    public void Respawn(GameObject obj)
+    {
+        indexSpawn = UnityEngine.Random.Range(0, spawn.Length);
+        Destroy(gameObject);
+        Instantiate(obj, spawn[indexSpawn].transform.position, spawn[indexSpawn].transform.rotation);
+    }
 }

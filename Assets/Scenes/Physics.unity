@@ -577,7 +577,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1593430724396622, guid: 3c8aba710abc4e54697af641b0bdefa9, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c8aba710abc4e54697af641b0bdefa9, type: 2}
@@ -1301,6 +1301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030646884}
   - component: {fileID: 2030646886}
+  - component: {fileID: 2030646885}
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Respawn
@@ -1329,6 +1330,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2030646885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030646883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431c730334a664749a5d7e8eb6ea38e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 66979135}
+  - {fileID: 1973369118}
+  - {fileID: 168288335}
+  - {fileID: 1381677816}
+  - {fileID: 2054458394}
+  - {fileID: 1210344818}
+  - {fileID: 1208046855}
+  - {fileID: 950927383}
+  playerShip: GP1v3
 --- !u!114 &2030646886
 MonoBehaviour:
   m_ObjectHideFlags: 0

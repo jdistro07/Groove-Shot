@@ -11,18 +11,12 @@ public class destroyed : MonoBehaviour {
 
     //ai properties
     public bool isAI;
-    public string aiID;
-
-    public AISpawner aiSpawner;
-    public Spawner spawn;
-    public destroyed desRef;
+    public GameObject AIObject;
 
     void Awake()
     {
         soundIndex = Random.Range(0,audio_destroyed.Length);
         audio_souce.PlayOneShot(audio_destroyed[soundIndex]);
-
-        spawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Spawner>();
     }
 
     private void Update()
@@ -35,10 +29,20 @@ public class destroyed : MonoBehaviour {
         {
             if (respawn_time <= 0)
             {
-                spawn.Spawn_Player();
-                Destroy(gameObject);
+                if (isAI)
+                {
+                    var aiSpawner = GameObject.FindGameObjectWithTag("Respawn").GetComponent<AISpawner>();
+                    aiSpawner.Respawn(AIObject);
+                    called = true;
+                }
+                else
+                {
+                    var spawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Spawner>();
+                    spawn.Spawn_Player();
+                    Destroy(gameObject);
 
-                called = true;
+                    called = true;
+                }
             }
         }
         

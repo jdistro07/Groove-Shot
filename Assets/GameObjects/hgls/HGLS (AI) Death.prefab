@@ -1346,10 +1346,7 @@ MonoBehaviour:
   soundIndex: 0
   respawn_time: 10
   isAI: 1
-  aiID: HGLS (AI)
-  aiSpawner: {fileID: 0}
-  spawn: {fileID: 0}
-  desRef: {fileID: 0}
+  AIObject: {fileID: 1124394641395192, guid: 5c002d2e88d0aa9458113d0f590eb50f, type: 2}
 --- !u!198 &198036025455076422
 ParticleSystem:
   m_ObjectHideFlags: 1
