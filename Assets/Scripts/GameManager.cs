@@ -39,7 +39,16 @@ public class GameManager : MonoBehaviour
         //Debug.Log(lvl+" "+ship);
     }
 
-    public void OnLeaveGameConfirm(){
+    public void OnLeaveGameConfirm()
+    {
+        StartCoroutine(MainMenu());
+    }
+
+    public IEnumerator MainMenu()
+    {
+
+        yield return new WaitForSeconds(2f);
+
         lvl = "MainUI";
         SceneManager.LoadScene("LoadingScreen");
     }
