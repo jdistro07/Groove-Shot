@@ -13,7 +13,6 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         playerShip = GameManager.ship;
-
         Spawn_Player();
     }
 

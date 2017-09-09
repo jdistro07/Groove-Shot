@@ -49,8 +49,8 @@ public class destroyed : MonoBehaviour {
                 else
                 {
                     var spawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Spawner>();
-                    spawn.Spawn_Player();
                     Destroy(gameObject);
+                    spawn.Spawn_Player();
 
                     called = true;
                 }
