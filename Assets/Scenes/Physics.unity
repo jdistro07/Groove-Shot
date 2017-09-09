@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 66979136}
   m_Layer: 0
   m_Name: Spawn (1)
-  m_TagString: Respawn
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 168288336}
   m_Layer: 0
   m_Name: Spawn (3)
-  m_TagString: Respawn
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1259,7 +1259,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1040877702875072, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 1973369119}
   m_Layer: 0
   m_Name: Spawn (2)
-  m_TagString: Respawn
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
