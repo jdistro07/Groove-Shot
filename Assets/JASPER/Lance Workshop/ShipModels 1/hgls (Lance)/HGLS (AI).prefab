@@ -872,7 +872,7 @@ MonoBehaviour:
   health: 950
   armor: 30
   destroyed: {fileID: 0}
-  crashThreshold: 50
+  crashThreshold: 26
 --- !u!114 &114113808271772290
 MonoBehaviour:
   m_ObjectHideFlags: 1

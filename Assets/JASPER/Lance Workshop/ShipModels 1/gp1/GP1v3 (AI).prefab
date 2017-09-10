@@ -970,7 +970,7 @@ MonoBehaviour:
   health: 450
   armor: 10
   destroyed: {fileID: 1040877702875072, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
-  crashThreshold: 0
+  crashThreshold: 18
 --- !u!114 &114304481241880120
 MonoBehaviour:
   m_ObjectHideFlags: 1

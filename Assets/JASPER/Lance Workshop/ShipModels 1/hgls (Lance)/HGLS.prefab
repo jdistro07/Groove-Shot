@@ -873,7 +873,7 @@ MonoBehaviour:
   forwardSpeed: 125000
   backwardSpeed: 25000
   turnSpeed: 10000
-  nonAI: 1
+  player: 1
   hoverPointsGameObject:
   - {fileID: 1583955508205008}
   - {fileID: 1215288234056342}
@@ -914,7 +914,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 950
   armor: 30
-  crashThreshold: 50
+  destroyed: {fileID: 0}
+  crashThreshold: 26
 --- !u!198 &198180205390584722
 ParticleSystem:
   m_ObjectHideFlags: 1
