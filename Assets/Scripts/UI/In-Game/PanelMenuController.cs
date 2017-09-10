@@ -31,8 +31,16 @@ public class PanelMenuController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            hud.SetActive(true);
-            pausePanel.SetActive(false);
+            if (!options.activeInHierarchy)
+            {
+                pausePanel.SetActive(false);
+                hud.SetActive(true);
+            }
+            else if (options.activeInHierarchy)
+            {
+                options.SetActive(false);
+                pausePanelMenu.SetActive(true);
+            }
         }
     }
 
