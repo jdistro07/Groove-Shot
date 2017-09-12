@@ -34,6 +34,8 @@ public class AISpawner : MonoBehaviour {
                 Debug.Log("Randomizing Spawn: "+indexSpawn);
             }
 
+            lastIndex = indexSpawn;
+
             if (x == 5)
             {
                 break;
