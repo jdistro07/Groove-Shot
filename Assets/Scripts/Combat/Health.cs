@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     //basic health components
     public float health;
     public float armor;
+    public float damageControl;
     public GameObject destroyed;
 
     //crash collision components
@@ -18,7 +19,7 @@ public class Health : MonoBehaviour
 		//bullet damage
 		if (collide.gameObject.tag == "bullet") {
 			var dam = GameObject.FindGameObjectWithTag ("bullet").GetComponent<RemoveObjectOnCollission> ();
-			health -= Mathf.Round((dam.damage * (collide.relativeVelocity.magnitude * 0.45f)) / armor);
+			health -= Mathf.Round((dam.damage * (collide.relativeVelocity.magnitude * damageControl)) / armor);
 		}
 		else
 		{

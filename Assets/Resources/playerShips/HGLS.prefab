@@ -939,8 +939,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80549c4d6df1ff4c82491ce4c568dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 950
-  armor: 30
+  health: 550
+  armor: 25
+  damageControl: 0.95
   destroyed: {fileID: 1028008256626958, guid: c6845a9c4eb0aea49addbbbff477bd3f, type: 2}
   crashThreshold: 23
 --- !u!114 &114845111912687682
@@ -954,7 +955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bdd4076863f80246a0ee6fb8ba12517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 150000
+  projectileSpeed: 100000
   projectile: {fileID: 54981700931738778, guid: b1d53799e73c8c84592b3f6ff2c69ce0,
     type: 2}
   projectileOrigin: {fileID: 0}
