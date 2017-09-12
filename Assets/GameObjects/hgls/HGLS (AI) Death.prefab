@@ -1344,7 +1344,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1d33928df9f1f0c468ce8c41aea0fe5d, type: 3}
   audio_souce: {fileID: 82591458313838094}
   soundIndex: 0
-  respawn_time: 10
+  respawn_time: 5
   isAI: 1
   AIObject: {fileID: 1588091384157660, guid: 5c002d2e88d0aa9458113d0f590eb50f, type: 2}
   spawn: []
