@@ -16,6 +16,9 @@ public class PanelMenuController : MonoBehaviour {
     public GameObject confirmation;
     public GameObject pausePanelMenu;
     public GameObject options;
+    public GameObject ScorePanel;
+
+    public bool hotKeys = false; // enable hotkeys
 
     void OnEnable()
     {
@@ -31,8 +34,22 @@ public class PanelMenuController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            hud.SetActive(true);
-            pausePanel.SetActive(false);
+            if (!ScorePanel.activeInHierarchy)
+            {
+                if (hotKeys == true)
+                {
+                    if (!options.activeInHierarchy)
+                    {
+                        pausePanel.SetActive(false);
+                        hud.SetActive(true);
+                    }
+                    else if (options.activeInHierarchy)
+                    {
+                        options.SetActive(false);
+                        pausePanelMenu.SetActive(true);
+                    }
+                }
+            }
         }
     }
 

@@ -19,6 +19,7 @@ TagManager:
   - DestroyedAI
   - Waypoint
   - AIDestroyed
+  - AITurret
   layers:
   - Default
   - TransparentFX
