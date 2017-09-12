@@ -21,7 +21,6 @@ public class AISpawner : MonoBehaviour {
             ai.Add(obj);
         }
 
-
         for (int x=0; x<spawn.Length; x++)
         {
             indexAI = UnityEngine.Random.Range(0, ai.Count);
