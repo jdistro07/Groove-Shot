@@ -8997,9 +8997,19 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114382296018727532, guid: 2071570d1015a6a429c6b9106f23c295,
+        type: 2}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 1204563237}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2071570d1015a6a429c6b9106f23c295, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1204563237 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1266036913321358, guid: 2071570d1015a6a429c6b9106f23c295,
+    type: 2}
+  m_PrefabInternal: {fileID: 1204563236}
 --- !u!1 &1204593336
 GameObject:
   m_ObjectHideFlags: 0
