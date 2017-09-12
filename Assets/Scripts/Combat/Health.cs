@@ -18,14 +18,14 @@ public class Health : MonoBehaviour
 		//bullet damage
 		if (collide.gameObject.tag == "bullet") {
 			var dam = GameObject.FindGameObjectWithTag ("bullet").GetComponent<RemoveObjectOnCollission> ();
-			health -= Mathf.Round((dam.damage * (collide.relativeVelocity.magnitude / 50)) / armor);
+			health -= Mathf.Round((dam.damage * (collide.relativeVelocity.magnitude * 0.45f)) / armor);
 		}
 		else
 		{
 			//crash collision damage
 			if (collide.relativeVelocity.magnitude > crashThreshold && health > 0)
 			{
-				health = Mathf.Round(health - (collide.relativeVelocity.magnitude / armor));
+				health -= Mathf.Round(collide.relativeVelocity.magnitude * (collide.relativeVelocity.magnitude - crashThreshold) / armor);
 			}
 		}
 
