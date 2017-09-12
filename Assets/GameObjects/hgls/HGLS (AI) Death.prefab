@@ -1346,7 +1346,8 @@ MonoBehaviour:
   soundIndex: 0
   respawn_time: 10
   isAI: 1
-  AIObject: {fileID: 1124394641395192, guid: 5c002d2e88d0aa9458113d0f590eb50f, type: 2}
+  AIObject: {fileID: 1588091384157660, guid: 5c002d2e88d0aa9458113d0f590eb50f, type: 2}
+  spawn: []
 --- !u!198 &198036025455076422
 ParticleSystem:
   m_ObjectHideFlags: 1
