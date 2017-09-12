@@ -9,6 +9,9 @@ public class ScoreSummaryController : MonoBehaviour {
     public GameObject pausePanel_Menu;
     public GameObject hud;
 
+    public GameObject[] ai;
+    public GameObject[] ai_turret;
+
     private void OnEnable()
     {
         pausePanel.SetActive(true); //Enable pause BG
@@ -21,6 +24,21 @@ public class ScoreSummaryController : MonoBehaviour {
 
             hud.SetActive(false); //HUD
             pausePanel_Menu.SetActive(false); // pause menu
+        }
+
+        ai = GameObject.FindGameObjectsWithTag("AI");
+        ai_turret = GameObject.FindGameObjectsWithTag("AITurret");
+
+        foreach (GameObject aiChase in ai)
+        {
+            var chase = aiChase.GetComponent<AIChase>();
+            chase.enabled = false;
+        }
+
+        foreach (GameObject turret in ai_turret)
+        {
+            var shoot = turret.GetComponent<AIShoot>();
+            shoot.enabled = false;
         }
     }
 
