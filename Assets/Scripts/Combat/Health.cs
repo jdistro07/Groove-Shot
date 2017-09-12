@@ -28,12 +28,15 @@ public class Health : MonoBehaviour
 				health -= Mathf.Round(collide.relativeVelocity.magnitude * (collide.relativeVelocity.magnitude - crashThreshold) / armor);
 			}
 		}
+	}
 
-        if (health<=0)
+    private void FixedUpdate()
+    {
+        if (health <= 0)
         {
             Destroy(gameObject);
-            Instantiate(destroyed,transform.position,transform.rotation);
-			HUDController.score++;
+            Instantiate(destroyed, transform.position, transform.rotation);
+            HUDController.score++;
         }
-	}
+    }
 }
