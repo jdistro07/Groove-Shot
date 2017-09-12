@@ -58,8 +58,8 @@ GameObject:
   - component: {fileID: 81336044171665376}
   - component: {fileID: 82591458313838094}
   m_Layer: 8
-  m_Name: HGLS (AI) Death
-  m_TagString: Untagged
+  m_Name: HGLS Death
+  m_TagString: DestroyedPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   audio_souce: {fileID: 82591458313838094}
   soundIndex: 0
   respawn_time: 5
-  isAI: 1
+  isAI: 0
   AIObject: {fileID: 1588091384157660, guid: 5c002d2e88d0aa9458113d0f590eb50f, type: 2}
   spawn: []
 --- !u!198 &198036025455076422

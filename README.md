@@ -3,8 +3,8 @@
 New to this repo? The information below might help to set you up. If you got any necessary information to add, please contact the following people mentioned:
 
 ### Talk to these people ###
-1. skildfrix
-2. CycleGround
+1. Johndel Villanueva
+2. Jasper Lance Dayon
 
 #G-Axis: [PROJECT] Groove Shot
 

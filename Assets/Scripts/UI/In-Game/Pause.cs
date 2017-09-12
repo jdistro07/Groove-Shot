@@ -6,6 +6,7 @@ using System;
 public class Pause : MonoBehaviour {
 
     private bool isPaused;
+    public GameObject pausePanel;
 
     private void OnEnable()
     {
@@ -15,6 +16,18 @@ public class Pause : MonoBehaviour {
     private void OnDisable()
     {
         resume();
+    }
+
+    private void Update()
+    {
+        if (pausePanel.activeInHierarchy)
+        {
+            pause();
+        }
+        else
+        {
+            resume();
+        }
     }
 
     private void pause()

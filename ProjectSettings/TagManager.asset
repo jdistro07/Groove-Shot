@@ -19,7 +19,7 @@ TagManager:
   - DestroyedAI
   - Waypoint
   - AIDestroyed
-  - AITurret
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
