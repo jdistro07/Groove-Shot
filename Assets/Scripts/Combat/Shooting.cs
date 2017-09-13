@@ -37,8 +37,11 @@ public class Shooting : MonoBehaviour
 	{
         if (Input.GetKeyDown(KeyCode.R))
         {
-            currentAmmo = 0;
-            if (currentAmmo < maxAmmo && currentAmmo > 0) { StartCoroutine(reload_shells()); }
+            if (currentAmmo != maxAmmo)
+            {
+                currentAmmo = 0;
+                reload();
+            }
         }
 
         if (OneShot)
@@ -84,18 +87,14 @@ public class Shooting : MonoBehaviour
 
 	void LateUpdate()
 	{
-        if (currentAmmo <= 0)
-        {
-            StartCoroutine(reload_shells());
-        }
+        reload();
 	}
 
-    private IEnumerator reload_shells()
+    void reload()
     {
-        currentAmmo = 0;
-
-        yield return new WaitForSeconds(reloadTime);
-        currentAmmo = maxAmmo;
-        Debug.Log(currentAmmo);
+        if (Time.time > reloadTime + lastShot)
+        {
+            currentAmmo = maxAmmo;
+        }
     }
 }
