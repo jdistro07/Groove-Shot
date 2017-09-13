@@ -44,7 +44,5 @@ public class HUDController : MonoBehaviour {
 
 	//Lines of Codes beyond this point is contributed by Lance
 	public static int score;
-
 	public Text dispScore;
-
 }

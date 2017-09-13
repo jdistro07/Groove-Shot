@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreSummaryController : MonoBehaviour {
 
+    public Text txt_score;
+
     public GameObject pausePanel;
     public GameObject pausePanel_Menu;
     public GameObject hud;
@@ -26,6 +28,7 @@ public class ScoreSummaryController : MonoBehaviour {
             pausePanel_Menu.SetActive(false); // pause menu
         }
 
+        //Disable AI if found
         ai = GameObject.FindGameObjectsWithTag("AI");
         ai_turret = GameObject.FindGameObjectsWithTag("AITurret");
 
@@ -40,6 +43,10 @@ public class ScoreSummaryController : MonoBehaviour {
             var shoot = turret.GetComponent<AIShoot>();
             shoot.enabled = false;
         }
+
+        //GUI component controls
+        txt_score.text = HUDController.score.ToString();
+
     }
 
 }
