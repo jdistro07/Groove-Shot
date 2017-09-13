@@ -35,6 +35,12 @@ public class Shooting : MonoBehaviour
 
 	void Update ()
 	{
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            currentAmmo = 0;
+            if (currentAmmo <= 0) { StartCoroutine(reload_shells()); }
+        }
+
         if (OneShot)
         {
             if (Input.GetMouseButtonDown(0))
@@ -76,19 +82,17 @@ public class Shooting : MonoBehaviour
         }
 	}
 
-    void reload()
-    {
-		if (Time.time > reloadTime + lastShot)
-		{
-			currentAmmo = maxAmmo;
-		}
-    }
-
 	void FixedUpdate()
 	{
-		if (currentAmmo == 0)
-		{
-			reload ();
-		}
+        if (currentAmmo <= 0)
+        {
+            StartCoroutine(reload_shells());
+        }
 	}
+
+    private IEnumerator reload_shells()
+    {
+        yield return new WaitForSeconds(reloadTime);
+        currentAmmo = maxAmmo;
+    }
 }
