@@ -1068,7 +1068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 450
   armor: 10
-  damageControl: 0
+  damageControl: 0.2
   destroyed: {fileID: 1040877702875072, guid: 9286f0c4ac3bea4449bfa728f54c615c, type: 2}
   crashThreshold: 18
 --- !u!198 &198620029420174854
