@@ -939,9 +939,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80549c4d6df1ff4c82491ce4c568dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 550
+  health: 750
   armor: 25
-  damageControl: 0.95
+  damageControl: 0.3
   destroyed: {fileID: 1028008256626958, guid: c6845a9c4eb0aea49addbbbff477bd3f, type: 2}
   crashThreshold: 23
 --- !u!114 &114845111912687682

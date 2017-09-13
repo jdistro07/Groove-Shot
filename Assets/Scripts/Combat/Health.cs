@@ -35,10 +35,10 @@ public class Health : MonoBehaviour
     {
         if (health <= 0)
         {
-            Instantiate(destroyed, transform.position, transform.rotation);
-
-            Destroy(gameObject);
             HUDController.score++;
+            Destroy(gameObject);
+
+            Instantiate(destroyed, transform.position, transform.rotation);
         }
     }
 }

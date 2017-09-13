@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80549c4d6df1ff4c82491ce4c568dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 950
+  health: 750
   armor: 30
   damageControl: 0.3
   destroyed: {fileID: 1028008256626958, guid: 3d735d72efbfa0c4e838104fdf240f56, type: 2}
