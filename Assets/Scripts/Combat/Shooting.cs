@@ -35,6 +35,15 @@ public class Shooting : MonoBehaviour
 
 	void Update ()
 	{
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (currentAmmo != maxAmmo)
+            {
+                currentAmmo = 0;
+                reload();
+            }
+        }
+
         if (OneShot)
         {
             if (Input.GetMouseButtonDown(0))
@@ -76,19 +85,16 @@ public class Shooting : MonoBehaviour
         }
 	}
 
+	void LateUpdate()
+	{
+        reload();
+	}
+
     void reload()
     {
-		if (Time.time > reloadTime + lastShot)
-		{
-			currentAmmo = maxAmmo;
-		}
+        if (Time.time > reloadTime + lastShot)
+        {
+            currentAmmo = maxAmmo;
+        }
     }
-
-	void FixedUpdate()
-	{
-		if (currentAmmo == 0)
-		{
-			reload ();
-		}
-	}
 }

@@ -434,7 +434,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1588091384157660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.6364117}
   m_Children:
   - {fileID: 4276637508740576}
@@ -930,8 +930,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80549c4d6df1ff4c82491ce4c568dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 950
+  health: 750
   armor: 30
+  damageControl: 0.3
   destroyed: {fileID: 1028008256626958, guid: 3d735d72efbfa0c4e838104fdf240f56, type: 2}
   crashThreshold: 23
 --- !u!114 &114886048338888438

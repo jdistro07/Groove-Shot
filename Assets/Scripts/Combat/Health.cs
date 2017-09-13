@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
 		//bullet damage
 		if (collide.gameObject.tag == "bullet") {
 			var dam = GameObject.FindGameObjectWithTag ("bullet").GetComponent<RemoveObjectOnCollission> ();
-			health -= Mathf.Round((dam.damage * (collide.relativeVelocity.magnitude * damageControl)) / armor);
+			health -= Mathf.Round((dam.damage * ((collide.relativeVelocity.magnitude) * damageControl)) / armor);
 		}
 		else
 		{
@@ -35,9 +35,10 @@ public class Health : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
-            Instantiate(destroyed, transform.position, transform.rotation);
             HUDController.score++;
+            Destroy(gameObject);
+
+            Instantiate(destroyed, transform.position, transform.rotation);
         }
     }
 }
