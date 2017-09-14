@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class ProfilePanelController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject Main_Buttons;
+    public GameObject ProfilePanel;
+
+    private void OnEnable()
+    {
+        Main_Buttons.SetActive(false);
+        ProfilePanel.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        Main_Buttons.SetActive(true);
+        ProfilePanel.SetActive(true);
+    }
+
+    void OnClick_Close()
+    {
+        this.gameObject.SetActive(false);
+    }
 }

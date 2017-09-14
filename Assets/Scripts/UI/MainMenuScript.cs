@@ -19,6 +19,7 @@ public class MainMenuScript : MonoBehaviour {
     public GameObject mapSelect;
     public GameObject shipSelection;
     public GameObject panelOptions;
+    public GameObject profile_Create;
 
     //Buttons
     public Button btnConfirm; //This control can be found on the MapSelection Panel
@@ -82,6 +83,10 @@ public class MainMenuScript : MonoBehaviour {
         }
     }
 
+    public void OnClick_ProfileCreate()
+    {
+        profile_Create.SetActive(true);
+    }
 
     //Options
     public void ClickOptions()
