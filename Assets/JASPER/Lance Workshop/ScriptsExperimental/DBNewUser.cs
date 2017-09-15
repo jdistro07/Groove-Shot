@@ -32,6 +32,9 @@ public class DBNewUser : MonoBehaviour
 			form.AddField ("usernamePost", username);
 
 			WWW www = new WWW (addUsersLink, form);
+
+			usernameInput.text = "";
+			usernameInput.placeholder.GetComponent<Text> ().text = "New User Added";
 		}
 		else
 		{

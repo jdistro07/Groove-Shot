@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DBLoader : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class DBLoader : MonoBehaviour
 		yield return username;
 		string userData = username.text;
 		users = userData.Split(';');
-		print (GetUsername(users[2], "Username: "));
+		print (GetUsername(users[0], "Username: "));
 	}
 
 	string GetUsername(string name, string index)
