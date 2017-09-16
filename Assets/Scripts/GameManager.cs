@@ -24,12 +24,6 @@ public class GameManager : MonoBehaviour
     //loaders
     AsyncOperation async;
 
-    private void Awake()
-    {
-        Debug.Log("[Game Manger] Map: " + lvl);
-        Debug.Log("[Game Manager] Ship: " + ship);
-    }
-
     public void uiIDClassFetcher()
     {
         var uiID = GameObject.FindGameObjectWithTag("Main UI Interface").GetComponent<uiIDCatcher>();
@@ -60,7 +54,7 @@ public class GameManager : MonoBehaviour
         while (!async.isDone)
         {
             float p = Mathf.Clamp01(async.progress/.9f);
-            Debug.Log(p);
+            Debug.Log("Loading: "+p);
             yield return null;
         }
 
