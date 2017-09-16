@@ -7,8 +7,11 @@ public class DBNewUser : MonoBehaviour
 {
 	string addUsersLink = "http://localhost/GrooveShotDB/addusers.php";
 
+    [Header("Components")]
 	public Button createButton;
 	public InputField usernameInput;
+    public GameObject panel;
+
 
 	void Start()
 	{
@@ -35,11 +38,12 @@ public class DBNewUser : MonoBehaviour
 
 			usernameInput.text = "";
 			usernameInput.placeholder.GetComponent<Text> ().text = "New User Added";
+            panel.SetActive(false);
 		}
 		else
 		{
 			usernameInput.text = "";
-			usernameInput.placeholder.GetComponent<Text> ().text = "No null usernames";
+			usernameInput.placeholder.GetComponent<Text> ().text = "Invalid Username";
 		}
 	}
 }
