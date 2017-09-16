@@ -3760,7 +3760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ab0f916a5157c4288faa9a3f350fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 0}
+  pausePanel: {fileID: 1266036913321358}
 --- !u!114 &114383456189203190
 MonoBehaviour:
   m_ObjectHideFlags: 1
