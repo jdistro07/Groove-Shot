@@ -35,6 +35,7 @@ Thumbs.db
 #Folders
 MiniProjects/
 Assets/ImportedAssets/ProCore/ProCoreFiles/ProCore/ProBuilderData/**
+Assets/ProCore/ProBuilder/Data/
 
 #Assets
 Assets/ImportedAssets/NoesisGUI/
