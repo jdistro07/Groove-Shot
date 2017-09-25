@@ -527,6 +527,9 @@ GameObject:
   m_Component:
   - component: {fileID: 224416512802253050}
   - component: {fileID: 222380793224447674}
+  - component: {fileID: 114296865384428228}
+  - component: {fileID: 114632450096068164}
+  - component: {fileID: 114298340396904682}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -4671,6 +4674,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainButtons: {fileID: 1263756436921912}
+--- !u!114 &114296865384428228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206126707789490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!114 &114298101610480764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4734,6 +4750,23 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114298340396904682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206126707789490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7133a2ec4de86ac4eacbc5a6a2221655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: http://localhost/GrooveShotDB/getusers.php
+  users: []
+  button: {fileID: 1315163209367220, guid: f5f8f978167f93e4aa99fb400806eb66, type: 2}
+  panel: {fileID: 224416512802253050}
+  buttonText: {fileID: 114661899691542622, guid: f5f8f978167f93e4aa99fb400806eb66,
+    type: 2}
 --- !u!114 &114300402897366932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6651,6 +6684,28 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Option A
+--- !u!114 &114632450096068164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206126707789490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1297475563, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
 --- !u!114 &114633152299340538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7237,8 +7292,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114648977168928462}
   m_HandleRect: {fileID: 224722277686851992}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.5875514
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10554,7 +10609,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000017300248, y: 0.000010378659}
-  m_SizeDelta: {x: -0.083313, y: 293}
+  m_SizeDelta: {x: -0.083313, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224429787208861052
 RectTransform:
@@ -11520,7 +11575,7 @@ RectTransform:
   m_Father: {fileID: 224553188004845484}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.41244859}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
