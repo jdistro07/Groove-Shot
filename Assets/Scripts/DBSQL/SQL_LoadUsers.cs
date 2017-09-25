@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class SQL_LoadUsers : MonoBehaviour {
 
     [Header("DATABASE COMPONENTS")]
     public string url = "http://localhost/GrooveShotDB/getusers.php"; // default link
     public string[] users;
-    public bool called = false;
+    public int record_count;
 
     public GameObject button;
     public RectTransform panel;
@@ -21,7 +22,7 @@ public class SQL_LoadUsers : MonoBehaviour {
 
     private void OnDisable()
     {
-        users = new string[0];
+        record_count = users.Length;
     }
 
     private IEnumerator LoadUsers()
@@ -31,23 +32,24 @@ public class SQL_LoadUsers : MonoBehaviour {
 
         // place records to string and store it on the array splitted on ';'
         string data = link.text;
-        users = data.Split(';');
+        users = data.Split(new string[] {";"}, StringSplitOptions.RemoveEmptyEntries);
 
-        if (!called)
+        while (record_count != users.Length)
         {
-            called = true;
-            for (int count = 0; count < users.Length; count++)
+            try
             {
+                record_count++;
                 GameObject go_button = (GameObject)Instantiate(button);
-                buttonText.text = users[count];
+                buttonText.text = users[record_count];
 
                 go_button.transform.SetParent(panel, false);
-                yield return count;
             }
+            catch
+            {
+                break;
+                Debug.Log("[SQL_LoadUser] Record loop stopped successfully!");
+            }
+            yield return record_count;
         }
-        else
-        {
-            Debug.Log("[SQL_LoadUsers.cs]Database users already loaded...");
-        } 
     }
 }

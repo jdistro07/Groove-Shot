@@ -4763,6 +4763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   url: http://localhost/GrooveShotDB/getusers.php
   users: []
+  record_count: 0
   button: {fileID: 1315163209367220, guid: f5f8f978167f93e4aa99fb400806eb66, type: 2}
   panel: {fileID: 224416512802253050}
   buttonText: {fileID: 114661899691542622, guid: f5f8f978167f93e4aa99fb400806eb66,
@@ -7292,7 +7293,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114648977168928462}
   m_HandleRect: {fileID: 224722277686851992}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -9892,8 +9893,8 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.2}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 52}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224122454209029966
@@ -10608,7 +10609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000017300248, y: 0.000010378659}
+  m_AnchoredPosition: {x: 0.000017300248, y: 0.000021591783}
   m_SizeDelta: {x: -0.083313, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224429787208861052
@@ -11576,7 +11577,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
