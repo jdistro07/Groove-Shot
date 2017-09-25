@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SQL_LoadUsers : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class SQL_LoadUsers : MonoBehaviour {
 
     public GameObject button;
     public RectTransform panel;
+    public Text buttonText;
 
     private void OnEnable()
     {
@@ -28,6 +30,8 @@ public class SQL_LoadUsers : MonoBehaviour {
         for (int count=0; count<users.Length; count++)
         {
             GameObject go_button = (GameObject)Instantiate(button);
+            buttonText.text = users[count];
+
             go_button.transform.SetParent(panel,false);
         }
     }
