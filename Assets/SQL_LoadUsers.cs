@@ -8,6 +8,9 @@ public class SQL_LoadUsers : MonoBehaviour {
     public string url = "http://localhost/GrooveShotDB/getusers.php"; // default link
     public string[] users;
 
+    public GameObject button;
+    public RectTransform panel;
+
     private void OnEnable()
     {
         StartCoroutine(LoadUsers());
@@ -21,5 +24,11 @@ public class SQL_LoadUsers : MonoBehaviour {
         // place records to string and store it on the array splitted on ';'
         string data = link.text;
         users = data.Split(';');
+
+        for (int count=0; count<users.Length; count++)
+        {
+            GameObject go_button = (GameObject)Instantiate(button);
+            go_button.transform.SetParent(panel,false);
+        }
     }
 }
