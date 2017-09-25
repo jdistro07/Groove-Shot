@@ -46,8 +46,8 @@ public class SQL_LoadUsers : MonoBehaviour {
             }
             catch
             {
-                break;
                 Debug.Log("[SQL_LoadUser] Record loop stopped successfully!");
+                break;
             }
             yield return record_count;
         }
