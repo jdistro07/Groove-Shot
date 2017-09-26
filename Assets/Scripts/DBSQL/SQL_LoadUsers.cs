@@ -32,24 +32,15 @@ public class SQL_LoadUsers : MonoBehaviour {
 
         // place records to string and store it on the array splitted on ';'
         string data = link.text;
-        users = data.Split(new string[] {";"}, StringSplitOptions.RemoveEmptyEntries);
+        users = data.Split(new string[] { ";" }, StringSplitOptions.RemoveEmptyEntries);
 
-        while (record_count != users.Length)
+        foreach (string s in users)
         {
-            try
-            {
-                record_count++;
+            if (record_count == users.Length) break;
                 GameObject go_button = (GameObject)Instantiate(button);
                 buttonText.text = users[record_count];
-
                 go_button.transform.SetParent(panel, false);
+                record_count++;
             }
-            catch
-            {
-                Debug.Log("[SQL_LoadUser] Record loop stopped successfully!");
-                break;
-            }
-            yield return record_count;
-        }
     }
 }
