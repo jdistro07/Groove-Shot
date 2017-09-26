@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+	//others
+	public bool Invulnerable = false;
+	public float invulnarebilityTime;
+
     //basic health components
     public float health;
     public float armor;
@@ -16,17 +20,21 @@ public class Health : MonoBehaviour
 
     public void OnCollisionEnter(Collision collide)
     {
-		//bullet damage
-		if (collide.gameObject.tag == "bullet") {
-			var dam = GameObject.FindGameObjectWithTag ("bullet").GetComponent<RemoveObjectOnCollission> ();
-			health -= Mathf.Round((dam.damage * ((collide.relativeVelocity.magnitude) * damageControl)) / armor);
-		}
-		else
+		if (Invulnerable == false)
 		{
-			//crash collision damage
-			if (collide.relativeVelocity.magnitude > crashThreshold && health > 0)
+			//bullet damage
+			if (collide.gameObject.tag == "bullet")
 			{
-				health -= Mathf.Round(collide.relativeVelocity.magnitude * (collide.relativeVelocity.magnitude - crashThreshold) / armor);
+				var dam = GameObject.FindGameObjectWithTag ("bullet").GetComponent<RemoveObjectOnCollission> ();
+				health -= Mathf.Round ((dam.damage * ((collide.relativeVelocity.magnitude) * damageControl)) / armor);
+			}
+			else
+			{
+				//crash collision damage
+				if (collide.relativeVelocity.magnitude > crashThreshold && health > 0)
+				{
+					health -= Mathf.Round (collide.relativeVelocity.magnitude * (collide.relativeVelocity.magnitude - crashThreshold) / armor);
+				}
 			}
 		}
 	}
