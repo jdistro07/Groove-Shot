@@ -7,7 +7,7 @@ public class ProfileWidgetController : MonoBehaviour {
 
     public Text name;
 
-    private void LateUpdate()
+    private void OnEnable()
     {
         var main_uiIDCatcher = GameObject.Find("MainCanvas").GetComponent<uiIDCatcher>();
         name.text = main_uiIDCatcher.player_id;
