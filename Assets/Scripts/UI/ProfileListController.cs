@@ -21,4 +21,9 @@ public class ProfileListController : MonoBehaviour {
         this.gameObject.SetActive(false);
     }
 
+    public void OnClickConfirm()
+    {
+        this.gameObject.SetActive(false);
+    }
+
 }
