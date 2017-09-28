@@ -19,7 +19,7 @@ public class DBInsertScore : MonoBehaviour
 
 	public void scoreInsert()
 	{
-		string username = "dummy";
+		string username = GameManager.player_id;
 		string score = scoreText.text;
 
 		WWWForm form = new WWWForm ();
