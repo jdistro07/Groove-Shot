@@ -20,6 +20,12 @@ public class GameManager : MonoBehaviour
 
     public static string lvl;
     public static string ship;
+    public static string player_id;
+
+    [Header("Debugging")]
+    public string playerid = player_id;
+    public string level = lvl;
+    public string ship_char = ship;
 
     //loaders
     AsyncOperation async;
@@ -27,8 +33,11 @@ public class GameManager : MonoBehaviour
     public void uiIDClassFetcher()
     {
         var uiID = GameObject.FindGameObjectWithTag("Main UI Interface").GetComponent<uiIDCatcher>();
+
         lvl = uiID.mapID;
         ship = uiID.shipID;
+        player_id = uiID.player_id;
+
 
         //Debug.Log(lvl+" "+ship);
     }

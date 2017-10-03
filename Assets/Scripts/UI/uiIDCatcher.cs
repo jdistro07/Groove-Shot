@@ -8,13 +8,16 @@ public class uiIDCatcher : MonoBehaviour {
 
     //UIElements
     public Text dispMapName;
+    public Text disp_name;
 
     //IDs
     public string mapID;
     public string shipID;
+    public string player_id;
 
     public static string mapIDLoader;
     public static string shipIDLoader;
+    public static string playerLoader;
 
     /*
 		When a map is clicked, return the value to the catcher
