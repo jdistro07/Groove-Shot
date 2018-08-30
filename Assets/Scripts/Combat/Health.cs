@@ -18,6 +18,17 @@ public class Health : MonoBehaviour
     //crash collision components
     public float crashThreshold; //the minimum amount of unit required to affect the object
 
+	void invulOff()
+	{
+		Invulnerable = false;
+	}
+
+	void Awake()
+	{
+		Invulnerable = true;
+		Invoke ("invulOff", invulnarebilityTime);
+	}
+
     public void OnCollisionEnter(Collision collide)
     {
 		if (Invulnerable == false)

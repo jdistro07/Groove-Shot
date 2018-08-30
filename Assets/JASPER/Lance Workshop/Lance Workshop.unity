@@ -147,6 +147,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114431228736437716, guid: 3c8aba710abc4e54697af641b0bdefa9,
+        type: 2}
+      propertyPath: invulnarebilityTime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c8aba710abc4e54697af641b0bdefa9, type: 2}
   m_IsPrefabParent: 0
@@ -271,12 +276,12 @@ Prefab:
     - target: {fileID: 114163326776233152, guid: 1181dcd062dbc9a4ca40dd72a1b95cfc,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114472139008691620, guid: 1181dcd062dbc9a4ca40dd72a1b95cfc,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1181dcd062dbc9a4ca40dd72a1b95cfc, type: 2}
@@ -721,10 +726,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 702748431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 585d2f94c41dbc84ea76abfa0c545ebf, type: 3}
+  m_Script: {fileID: 11500000, guid: 2322f35396bbcbe4e8f76bdeebfde23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  users: []
+  scorelist: []
 --- !u!1 &719524654
 GameObject:
   m_ObjectHideFlags: 0
