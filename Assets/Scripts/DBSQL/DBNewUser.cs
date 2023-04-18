@@ -20,11 +20,6 @@ public class DBNewUser : MonoBehaviour
 		btn.onClick.AddListener (CreateUser);
 	}
 
-	void TaskOnClick()
-	{
-		CreateUser ();
-	}
-
 	public void CreateUser()
 	{
 		string username = usernameInput.text;

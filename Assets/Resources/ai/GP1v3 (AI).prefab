@@ -1025,6 +1025,8 @@ MonoBehaviour:
   forwardSpeed: 47
   backwardSpeed: 15
   turnSpeed: 3
+  powerInput: 0
+  turnInput: 0
   player: 0
   hoverPointsGameObject:
   - {fileID: 1990485223596338}
@@ -1066,6 +1068,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80549c4d6df1ff4c82491ce4c568dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Invulnerable: 0
+  invulnarebilityTime: 3
   health: 450
   armor: 10
   damageControl: 0.2

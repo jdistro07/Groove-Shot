@@ -12895,9 +12895,43 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1680953320225182, guid: 2071570d1015a6a429c6b9106f23c295, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2071570d1015a6a429c6b9106f23c295, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1619047259 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114982938730915474, guid: 2071570d1015a6a429c6b9106f23c295,
+    type: 2}
+  m_PrefabInternal: {fileID: 1619047258}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1619047260 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1047461874369606, guid: 2071570d1015a6a429c6b9106f23c295,
+    type: 2}
+  m_PrefabInternal: {fileID: 1619047258}
+--- !u!114 &1619047261 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114755482011705502, guid: 2071570d1015a6a429c6b9106f23c295,
+    type: 2}
+  m_PrefabInternal: {fileID: 1619047258}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1619047262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1619047260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57ba4450287617449c88ac360835e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backButton: {fileID: 1619047261}
+  scoreText: {fileID: 1619047259}
 --- !u!4 &1635762445 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b899b109968a14f4797d7cd111cb647b, type: 3}
@@ -14361,6 +14395,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a758861af6cf6d342b65413c32dbb609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerid: 3to0nezero
+  level: MainUI
+  ship_char: GP1v3
 --- !u!82 &1921119627
 AudioSource:
   m_ObjectHideFlags: 0
